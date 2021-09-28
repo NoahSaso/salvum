@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+p, h1, h2, h3 {
+  margin: 0;
+}
+
 main {
   height: 100vh;
 
@@ -39,4 +43,20 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+[class~="rowGroup"] {
+  & > :first-child {
+    max-width: 50%;
+    align-self: flex-start;
+  }
+
+  & > :last-child {
+    flex: 1;
+    max-width: 100%;
+    text-align: right;
+    padding-left: 20px;
+
+    word-break: break-word;
+  }
 }

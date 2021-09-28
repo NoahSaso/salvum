@@ -1,0 +1,35 @@
+@import "colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  padding: 10px;
+  border-radius: 4px;
+  background: $hover;
+
+  p {
+    font-size: 17px;
+
+    &.tertiary {
+      color: $tertiary;
+    }
+  }
+
+  .bioavailability {
+    margin-top: 4px;
+  }
+
+  h3 {
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .group {
+    margin-top: 4px;
+  }
+}
+
+

@@ -16,7 +16,7 @@ export interface Substance {
   addictionPotential: null | string;
   tolerance:          Tolerance | null;
   crossTolerances:    string[] | null;
-  roas:               Roa[];
+  roas:               ROA[];
   interactions:       Interaction[] | null;
 }
 
@@ -31,7 +31,7 @@ export interface Interaction {
   name:   string;
 }
 
-export interface Roa {
+export interface ROA {
   name:             string;
   dosage?:          Dosage[] | null;
   duration?:        Dosage[] | null;
