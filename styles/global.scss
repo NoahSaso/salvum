@@ -33,3 +33,10 @@ main {
 [class~="hidden"] {
   display: none !important;
 }
+
+[class~="horizontal"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

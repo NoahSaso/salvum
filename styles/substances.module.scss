@@ -50,4 +50,33 @@
 
   background-color: $off-background;
   height: 100%;
+
+  padding: 20px;
+
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    flex-shrink: 1;
+  }
+
+  & > :first-child {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .classes {
+    font-size: 17px;
+    color: $tertiary;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .summary {
+    color: $secondary;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
 }

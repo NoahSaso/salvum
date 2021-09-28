@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Head from 'next/head'
 import { FC, useState } from 'react'
+import { IoOpenOutline } from 'react-icons/io5'
 import { SWRConfig } from 'swr'
 
 import { useSubstances } from '../helpers/swr'
@@ -27,9 +28,27 @@ const Substances: FC = () => {
             </div>
           ))}
         </div>
-        <div className={cn(styles.substanceContainer, { hidden: !substance })}>
-          
-        </div>
+        {!!substance && (
+          <div className={styles.substanceContainer}>
+            <a
+              className="horizontal"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={substance.url}
+            >
+              <h1>{substance.name}</h1>
+              <IoOpenOutline size={28} />
+            </a>
+
+            {!!substance.classes?.chemical && Array.isArray(substance.classes.chemical) && (
+              <p className={styles.classes}>{substance.classes.chemical.join(' • ')}</p>
+            )}
+            
+            {!!substance.summary && (
+              <p className={styles.summary}>{substance.summary}</p>
+            )}
+          </div>
+        )}
       </div>
     </>
   )
