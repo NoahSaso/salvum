@@ -1,0 +1,2462 @@
+{
+    "LSD": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & Synergy"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "aMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & Decrease"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "Mushrooms": {
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & Synergy"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "aMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "DMT": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & Synergy"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "aMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "Mescaline": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Caution"
+        },
+        "NBOMes": {
+            "status": "Caution"
+        },
+        "2C-x": {
+            "status": "Caution"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "The focus and anxiety caused by stimulants is magnified by psychedelics and results in an increased risk of thought loops"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "The focus and anxiety caused by stimulants is magnified by psychedelics and results in an increased risk of thought loops"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine are uncomfortable and this will be magnified by psychedelics"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "This combination can cause seizures due to the lowering of the threshold by tramadol and the potential of mescaline to cause seziures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Caution"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "DOx": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution"
+        },
+        "NBOMes": {
+            "status": "Caution"
+        },
+        "2C-x": {
+            "status": "Caution"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions, particularly increasing the risk of unpleasant physical side effects."
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy",
+            "note": "Ketamine and psychedelics tend to potentiate each other - go slowly."
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "As an NMDA antagonist MXE potentiates DOx which can be unpleasantly intense"
+        },
+        "DXM": {
+            "status": "Unsafe",
+            "note": "The DOx class as psychedelic stimulants have the potential to mask the effects of DXM and could lead to redosing to an unsafe level. DXM can also potentiate DOx resulting in an unpleasantly intense experience."
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "The combined stimulating effects of the two can lead to an uncomfortable body-load, while the focusing effects of amphetamine can easily lead to thought loops. Coming down from amphetamines while the DOx is still active can be quite anxiogenic. "
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "The combined stimulating effects of the two can be uncomfortable. Coming down on the MDMA while the DOx is still active can be quite anxiogenic. "
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "The combined stimulating effects of the two can lead to an uncomfortable body-load, while the focusing effects of cocaine can easily lead to thought loops. Coming down from cocaine while the DOx is still active can be quite anxiogenic"
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating it may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are  reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also  allow you to drink past a point where you might normally pass out, increasing the risk."
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions."
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "NBOMes": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution"
+        },
+        "DOx": {
+            "status": "Caution"
+        },
+        "2C-x": {
+            "status": "Caution"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions and the NBOMes are known to be unpredictable even alone. This combination is best avoided"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "As an NMDA antagonist MXE potentiates NBOMes which can be unpleasantly intense"
+        },
+        "DXM": {
+            "status": "Unsafe"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "Amphetamines and NBOMes both provide considerable stimulation. When combined they can result in tachycardia, hypertension, vasoconstriction and in extreme cases heart failure. The anxiogenic and focusing effects of stimulants are also not good in combination with psychedelics as they can lead to unpleasant thought loops. NBOMes are known to cause seizures and stimulants can increase this risk."
+        },
+        "MDMA": {
+            "status": "Caution"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "Cocaine and NBOMes both provide considerable stimulation. When combined they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "Caffiene can bring out the natural stimulation from psychedelic drugs to make it uncomfortable. High doses can cause anxiety which is hard to handle while tripping"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and NBOMes have also shown a tendency to cause severe seizures"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "2C-x": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution"
+        },
+        "DOx": {
+            "status": "Caution"
+        },
+        "NBOMes": {
+            "status": "Caution"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "The 5-MeO psychedelics can interact unpredictably to potentiate other psychedelics"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally uneccessary because of the stimulating effects of psychedelics. Combination of the stimulating effects may be uncomfortable."
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. Combination of the stimulating effects may be uncomfortable."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics raise the risk of seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "2C-T-x": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution"
+        },
+        "DOx": {
+            "status": "Caution"
+        },
+        "NBOMes": {
+            "status": "Caution"
+        },
+        "2C-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "Both classes of compounds can be unpredictable alone"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Caution"
+        },
+        "DXM": {
+            "status": "Unsafe"
+        },
+        "PCP": {
+            "status": "Dangerous"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences. In extreme cases, they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "MDMA": {
+            "status": "Caution"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "Cocaine and 2c-t-x both provide considerable stimulation. When combined they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease",
+            "note": "Both these classes of compound can interact unpredictably. Caution should be exercised."
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy",
+            "note": "No expected interactions, some opioids have serotonin action, and could lead to Serotonin Syndrome or a seizure. These are pretty much only to Pentazocine, Methadone, Tramadol, Tapenatdol."
+        },
+        "Tramadol": {
+            "status": "Unsafe"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably, which could be dangerous given the unpredictability of the 2C-T-x series"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "aMT": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Dangerous"
+        },
+        "DOx": {
+            "status": "Dangerous"
+        },
+        "NBOMes": {
+            "status": "Dangerous"
+        },
+        "2C-x": {
+            "status": "Dangerous"
+        },
+        "2C-T-x": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Dangerous"
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics. Small amounts can reduce nausea with aMT but take care."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Dangerous"
+        },
+        "DXM": {
+            "status": "Dangerous"
+        },
+        "PCP": {
+            "status": "Dangerous"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Dangerous"
+        },
+        "MDMA": {
+            "status": "Dangerous"
+        },
+        "Cocaine": {
+            "status": "Dangerous"
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Caution",
+            "note": "aMT has a broad mechanism of action in the brain and so does alcohol so the combination can be unpredictable"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions"
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "aMT is an MAOI on its own. Using enzyme inhibitors can greatly reduce predictability of effects."
+        },
+        "SSRIs": {
+            "status": "Dangerous"
+        }
+    },
+    "5-MeO-xxT": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions"
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions, particularly increasing the risk of unpleasant physical side effects."
+        },
+        "NBOMes": {
+            "status": "Caution",
+            "note": "The 5-MeO class of tryptamines can be unpredictable in their interactions and the NBOMes are known to be unpredictable even alone. This combination is best avoided"
+        },
+        "2C-x": {
+            "status": "Caution",
+            "note": "The 5-MeO psychedelics can interact unpredictably to potentiate other psychedelics"
+        },
+        "2C-T-x": {
+            "status": "Caution",
+            "note": "Both classes of compounds can be unpredictable alone"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy",
+            "note": "Little information exists about this combination."
+        },
+        "PCP": {
+            "status": "Dangerous"
+        },
+        "DXM": {
+            "status": "Unsafe",
+            "note": "Little information exists about this combination."
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. "
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "Some of the 5-MeO tryptamines are a bit unpredictable and should be mixed with MDMA with care"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. "
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Low Risk & Decrease"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Decrease"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Unsafe"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Dangerous"
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "Cannabis": {
+        "Mushrooms": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "LSD": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "DMT": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Mescaline": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "NBOMes": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "2C-x": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "2C-T-x": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "aMT": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics. Small amounts can reduce nausea with aMT but take care."
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "Cannabis has an unexpectedly strong and somewhat unpredictable synergy with psychedelics."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy",
+            "note": "Large amounts of cannabis may cause strong and somewhat unpredictable experiences in combination with MDMA. Cannabis should be saved for towards the end of the experience if possible."
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Low Risk & Synergy",
+            "note": "In excess, this combination can cause nausea."
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Synergy"
+        },
+        "Opioids": {
+            "status": "Low Risk & Synergy"
+        },
+        "Tramadol": {
+            "status": "Low Risk & Synergy"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "Ketamine": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & Synergy",
+            "note": "Ketamine and psychedelics tend to potentiate each other - go slowly."
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "aMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & No Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "No unexpected interactions, though likely to increase blood pressure but not an issue with sensible doses. Moving around on high doses of this combination may be ill advised due to risk of physical injury."
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy",
+            "note": "No unexpected interactions, though likely to increase blood pressure  but not an issue with sensible doses. Moving around on high doses of  this combination may be ill advised due to risk of physical injury."
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "No unexpected interactions, though likely to increase blood pressure but not an issue with sensible doses. Moving around on high doses of this combination may be ill advised due to risk of physical injury."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions."
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a very high risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "Both substances bring a risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors appear to increase the potency of Ketamine. MAO-A inhbitors have some negative reports associated with the combination but there isn't much information available"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "MXE": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "As an NMDA antagonist MXE potentiates DOx which can be unpleasantly intense"
+        },
+        "NBOMes": {
+            "status": "Caution",
+            "note": "As an NMDA antagonist MXE potentiates NBOMes which can be unpleasantly intense"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy",
+            "note": "Little information exists about this combination."
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & No Synergy"
+        },
+        "PCP": {
+            "status": "Caution",
+            "note": "There are no reports available about this combination"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Risk of tachycardia, hypertension, and manic states"
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "There have been reports of risky serotonergic interactions when the two are taken at the same time, but MXE taken to the end of an MDMA experience does not appear to cause the same issues."
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants taken with MXE can lead to hypermanic states much more easily, especially if sleep is avoided."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "No likely interactions"
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "There is a high risk of memory loss, vomiting and severe ataxia from this combination."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the patient falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "This combination can potentiate the effects of the opioid"
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess."
+        },
+        "MAOIs": {
+            "status": "Unsafe",
+            "note": "MAO-B inhibitors appear to increase the potency of MXE. MAO-A inhbitors have some negative reports associated with the combination but there isn't much information available"
+        },
+        "SSRIs": {
+            "status": "Caution",
+            "note": "Depending on the SSRI this combination can be unpredictable"
+        }
+    },
+    "DXM": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Unsafe",
+            "note": "The DOx class as psychedelic stimulants have the potential to mask the effects of DXM and could lead to redosing to an unsafe level. DXM can also potentiate DOx resulting in an unpleasantly intense experience."
+        },
+        "NBOMes": {
+            "status": "Unsafe"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Unsafe"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Unsafe",
+            "note": "Little information exists about this combination."
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & No Synergy"
+        },
+        "PCP": {
+            "status": "Dangerous"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "Both substances raise heart rate, in extreme cases, panic attacks caused by these drugs have led to more serious heart issues."
+        },
+        "MDMA": {
+            "status": "Dangerous"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "Both substances raise heart rate, in extreme cases, panic attacks caused by these drugs have led to more serious heart issues"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Additionally CNS depression can lead to difficulty breathing. Avoid on anything higher than 1st plateau."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the patient falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position. This combination is hard to predict"
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "CNS depression, difficult breathing, heart issues, hepatoxic, just very unsafe combination all around. Additionally if one takes dxm, their tolerance of opiates goes down slightly, thus causing additional synergistic effects."
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Caution",
+            "note": "Small doses of benzos can end a bad trip, but both substances potentiate the ataxia and sedation caused by the other and this can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "High risk of serotonin syndrome"
+        },
+        "SSRIs": {
+            "status": "Dangerous",
+            "note": "High risk of serotonin syndrome."
+        }
+    },
+    "PCP": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Dangerous"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Dangerous"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "There are no reports available about this combination"
+        },
+        "DXM": {
+            "status": "Dangerous"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "MDMA": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Alcohol": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Opioids": {
+            "status": "Caution",
+            "note": "PCP can reduce opioid tolerance, increasing the risk of overdose"
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Unsafe",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely"
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "This combination is very poorly explored"
+        },
+        "SSRIs": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        }
+    },
+    "Nitrous": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & Synergy"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "aMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy"
+        },
+        "MXE": {
+            "status": "Low Risk & Synergy"
+        },
+        "DXM": {
+            "status": "Low Risk & Synergy"
+        },
+        "PCP": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Low Risk & Synergy"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy"
+        },
+        "Cocaine": {
+            "status": "Low Risk & Synergy"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "GHB/GBL": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Opioids": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Tramadol": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & No Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "Amphetamines": {
+        "Mushrooms": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "LSD": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "DMT": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Mescaline": {
+            "status": "Caution",
+            "note": "The focus and anxiety caused by stimulants is magnified by psychedelics and results in an increased risk of thought loops"
+        },
+        "DOx": {
+            "status": "Unsafe",
+            "note": "The combined stimulating effects of the two can lead to an uncomfortable body-load, while the focusing effects of amphetamine can easily lead to thought loops. Coming down from amphetamines while the DOx is still active can be quite anxiogenic. "
+        },
+        "NBOMes": {
+            "status": "Unsafe",
+            "note": "Amphetamines and NBOMes both provide considerable stimulation. When combined they can result in tachycardia, hypertension, vasoconstriction and in extreme cases heart failure. The anxiogenic and focusing effects of stimulants are also not good in combination with psychedelics as they can lead to unpleasant thought loops. NBOMes are known to cause seizures and stimulants can increase this risk."
+        },
+        "2C-x": {
+            "status": "Caution",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally uneccessary because of the stimulating effects of psychedelics. Combination of the stimulating effects may be uncomfortable."
+        },
+        "2C-T-x": {
+            "status": "Unsafe",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences. In extreme cases, they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Unsafe",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. "
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Ketamine": {
+            "status": "Caution",
+            "note": "No unexpected interactions, though likely to increase blood pressure but not an issue with sensible doses. Moving around on high doses of this combination may be ill advised due to risk of physical injury."
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "Risk of tachycardia, hypertension, and manic states"
+        },
+        "DXM": {
+            "status": "Unsafe",
+            "note": "Both substances raise heart rate, in extreme cases, panic attacks caused by these drugs have led to more serious heart issues."
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "MDMA": {
+            "status": "Low Risk & Synergy",
+            "note": "Amphetamines increase the neurotoxic effects of MDMA"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "This combination of stimulants will increase strain on the heart. It is not generally worth it as cocaine has a mild blocking effect on dopamine releasers like amphetamine"
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "This combination of stimulants is not generally necessary and may increase strain on the heart, as well as potentially causing anxiety and greater physical discomfort."
+        },
+        "Alcohol": {
+            "status": "Caution",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also allow you to drink past a point where you might normally pass out, increasing the risk. If you do decide to do this then you should set a limit of how much you will drink each hour and stick to it, bearing in mind that you will feel the alcohol and the stimulant less. Extended release formulations may severely impede sleep, further worsening the hangover."
+        },
+        "GHB/GBL": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of sedatives. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "Opioids": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of opiates. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease",
+            "note": "Both can dull each other's effects, so if one wears off before the other it's possible to overdose due to the lack of counteraction"
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably. MAO-A inhibitors with amphetamine can lead to hypertensive crises."
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "MDMA": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Synergy"
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "The combined stimulating effects of the two can be uncomfortable. Coming down on the MDMA while the DOx is still active can be quite anxiogenic. "
+        },
+        "NBOMes": {
+            "status": "Caution"
+        },
+        "2C-x": {
+            "status": "Low Risk & Synergy"
+        },
+        "2C-T-x": {
+            "status": "Caution"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Caution",
+            "note": "Some of the 5-MeO tryptamines are a bit unpredictable and should be mixed with MDMA with care"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy",
+            "note": "Large amounts of cannabis may cause strong and somewhat unpredictable experiences in combination with MDMA. Cannabis should be saved for towards the end of the experience if possible."
+        },
+        "Ketamine": {
+            "status": "Low Risk & Synergy",
+            "note": "No unexpected interactions, though likely to increase blood pressure  but not an issue with sensible doses. Moving around on high doses of  this combination may be ill advised due to risk of physical injury."
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "There have been reports of risky serotonergic interactions when the two are taken at the same time, but MXE taken to the end of an MDMA experience does not appear to cause the same issues."
+        },
+        "DXM": {
+            "status": "Dangerous"
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Low Risk & Synergy",
+            "note": "Amphetamines increase the neurotoxic effects of MDMA"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Cocaine blocks some of the desirable effects of MDMA while increasing the risk of heart attack."
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "Caffiene is not really necessary with MDMA and increases any neurotoxic effects from MDMA"
+        },
+        "Alcohol": {
+            "status": "Caution",
+            "note": "Both MDMA and alcohol cause dehydration. Approach this combination with caution, moderation and sufficient hydration. More than a small amount of alcohol will dull the euphoria of MDMA"
+        },
+        "GHB/GBL": {
+            "status": "Caution",
+            "note": "Large amounts of GHB/GBL may overwhelm the effects of MDMA on the comedown."
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "MAO-B inhibitors can increase the potency and duration of  phenethylamines unpredictably. MAO-A inhibitors with MDMA will lead to hypertensive crises."
+        },
+        "SSRIs": {
+            "status": "Low Risk & Decrease"
+        }
+    },
+    "Cocaine": {
+        "Mushrooms": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "LSD": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "DMT": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Mescaline": {
+            "status": "Caution",
+            "note": "The focus and anxiety caused by stimulants is magnified by psychedelics and results in an increased risk of thought loops"
+        },
+        "DOx": {
+            "status": "Unsafe",
+            "note": "The combined stimulating effects of the two can lead to an uncomfortable body-load, while the focusing effects of cocaine can easily lead to thought loops. Coming down from cocaine while the DOx is still active can be quite anxiogenic"
+        },
+        "NBOMes": {
+            "status": "Unsafe",
+            "note": "Cocaine and NBOMes both provide considerable stimulation. When combined they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "2C-x": {
+            "status": "Caution",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. Combination of the stimulating effects may be uncomfortable."
+        },
+        "2C-T-x": {
+            "status": "Unsafe",
+            "note": "Cocaine and 2c-t-x both provide considerable stimulation. When combined they can result in severe vasoconstriction, tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Unsafe",
+            "note": "The anxiogenic and focusing effects of stimulants increase the chance of unpleasant thought loops. The combination is generally unnecessary because of the stimulating effects of psychedelics. "
+        },
+        "Cannabis": {
+            "status": "Caution",
+            "note": "Stimulants increase anxiety levels and the risk of thought loops which can lead to negative experiences"
+        },
+        "Ketamine": {
+            "status": "Caution",
+            "note": "No unexpected interactions, though likely to increase blood pressure but not an issue with sensible doses. Moving around on high doses of this combination may be ill advised due to risk of physical injury."
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "Stimulants taken with MXE can lead to hypermanic states much more easily, especially if sleep is avoided."
+        },
+        "DXM": {
+            "status": "Unsafe",
+            "note": "Both substances raise heart rate, in extreme cases, panic attacks caused by these drugs have led to more serious heart issues"
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "This combination can easily lead to hypermanic states"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "This combination of stimulants will increase strain on the heart. It is not generally worth it as cocaine has a mild blocking effect on dopamine releasers like amphetamine"
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "Cocaine blocks some of the desirable effects of MDMA while increasing the risk of heart attack."
+        },
+        "Caffeine": {
+            "status": "Caution",
+            "note": "Both stimulants, risk of tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "Alcohol": {
+            "status": "Unsafe",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also allow you to drink past a point where you might normally pass out, increasing the risk. If you do decide to do this then you should set a limit of how much you will drink each hour and stick to it, bearing in mind that you will feel the alcohol less. Cocaine is potentiated somewhat by alcohol because of the formation of cocaethylene."
+        },
+        "GHB/GBL": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of sedatives. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest. Likewise the G can wear off and leave a dangerous concentration of cocaine behind"
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "Stimulants increase respiration rate allowing a higher dose of opiates. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Dangerous",
+            "note": "This combination is poorly explored"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy",
+            "note": "May reduce each others' effectiveness. Cocaine can reduce mental stability and therefore exacerbate conditions which SSRIs are used to treat."
+        }
+    },
+    "Caffeine": {
+        "Mushrooms": {
+            "status": "Low Risk & No Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & No Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine are uncomfortable and this will be magnified by psychedelics"
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating it may cause some physical discomfort."
+        },
+        "NBOMes": {
+            "status": "Caution",
+            "note": "Caffiene can bring out the natural stimulation from psychedelic drugs to make it uncomfortable. High doses can cause anxiety which is hard to handle while tripping"
+        },
+        "2C-x": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "2C-T-x": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "aMT": {
+            "status": "Caution",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "Cannabis": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions."
+        },
+        "MXE": {
+            "status": "Low Risk & No Synergy",
+            "note": "No likely interactions"
+        },
+        "DXM": {
+            "status": "Low Risk & No Synergy",
+            "note": "High doses of caffeine may cause anxiety which is less manageable when tripping, and since both are stimulating the combination may cause some physical discomfort."
+        },
+        "PCP": {
+            "status": "Caution",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Nitrous": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "This combination of stimulants is not generally necessary and may increase strain on the heart, as well as potentially causing anxiety and greater physical discomfort."
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "Caffiene is not really necessary with MDMA and increases any neurotoxic effects from MDMA"
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Both stimulants, risk of tachycardia, hypertension, and in extreme cases heart failure."
+        },
+        "Alcohol": {
+            "status": "Low Risk & No Synergy"
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Tramadol": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Decrease"
+        },
+        "MAOIs": {
+            "status": "Low Risk & No Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "Alcohol": {
+        "Mushrooms": {
+            "status": "Low Risk & Decrease"
+        },
+        "LSD": {
+            "status": "Low Risk & Decrease"
+        },
+        "DMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Decrease"
+        },
+        "DOx": {
+            "status": "Low Risk & Decrease",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are  reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also  allow you to drink past a point where you might normally pass out, increasing the risk."
+        },
+        "NBOMes": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Decrease",
+            "note": "Both these classes of compound can interact unpredictably. Caution should be exercised."
+        },
+        "aMT": {
+            "status": "Caution",
+            "note": "aMT has a broad mechanism of action in the brain and so does alcohol so the combination can be unpredictable"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy",
+            "note": "In excess, this combination can cause nausea."
+        },
+        "Ketamine": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a very high risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "MXE": {
+            "status": "Dangerous",
+            "note": "There is a high risk of memory loss, vomiting and severe ataxia from this combination."
+        },
+        "DXM": {
+            "status": "Dangerous",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Additionally CNS depression can lead to difficulty breathing. Avoid on anything higher than 1st plateau."
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Nitrous": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also allow you to drink past a point where you might normally pass out, increasing the risk. If you do decide to do this then you should set a limit of how much you will drink each hour and stick to it, bearing in mind that you will feel the alcohol and the stimulant less. Extended release formulations may severely impede sleep, further worsening the hangover."
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "Both MDMA and alcohol cause dehydration. Approach this combination with caution, moderation and sufficient hydration. More than a small amount of alcohol will dull the euphoria of MDMA"
+        },
+        "Cocaine": {
+            "status": "Unsafe",
+            "note": "Drinking on stimulants is risky because the sedative effects of the alcohol are reduced, and these are what the body uses to gauge drunkenness. This typically leads to excessive drinking with greatly reduced inhibitions, high risk of liver damage and increased dehydration. They will also allow you to drink past a point where you might normally pass out, increasing the risk. If you do decide to do this then you should set a limit of how much you will drink each hour and stick to it, bearing in mind that you will feel the alcohol less. Cocaine is potentiated somewhat by alcohol because of the formation of cocaethylene."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "Even in very low doses this combination rapidly leads to memory loss, severe ataxia and unconsciousness. There is a high risk of vomit aspiration while unconscious."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Memory blackouts are likely"
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Heavy CNS depressants, risk of seizures. Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Memory blackouts are likely."
+        },
+        "Benzodiazepines": {
+            "status": "Dangerous",
+            "note": "Ethanol ingestion may potentiate the CNS effects of many benzodiazepines. The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Blacking out and memory loss is almost certain."
+        },
+        "MAOIs": {
+            "status": "Unsafe",
+            "note": "Tyramine found in many alcoholic beverages can have dangerous reactions with MAOIs, causing an increase in blood pressure."
+        },
+        "SSRIs": {
+            "status": "Caution",
+            "note": "Alcohol may potentiate some of the pharmacologic effects of CNS-active agents. Use in combination may result in additive central nervous system depression and/or impairment of judgment, thinking, and  psychomotor skills."
+        }
+    },
+    "GHB/GBL": {
+        "Mushrooms": {
+            "status": "Low Risk & Decrease"
+        },
+        "LSD": {
+            "status": "Low Risk & Decrease"
+        },
+        "DMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Decrease"
+        },
+        "DOx": {
+            "status": "Low Risk & Decrease"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "aMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "MXE": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the patient falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "DXM": {
+            "status": "Dangerous",
+            "note": "Both substances cause ataxia and bring a risk of vomiting and unconsciousness. If the patient falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position. This combination is hard to predict"
+        },
+        "PCP": {
+            "status": "Dangerous",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Nitrous": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of sedatives. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "MDMA": {
+            "status": "Caution",
+            "note": "Large amounts of GHB/GBL may overwhelm the effects of MDMA on the comedown."
+        },
+        "Cocaine": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of sedatives. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest. Likewise the G can wear off and leave a dangerous concentration of cocaine behind"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Even in very low doses this combination rapidly leads to memory loss, severe ataxia and unconsciousness. There is a high risk of vomit aspiration while unconscious."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position"
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "The sedative effects of this combination can lead to dangerous respiratory depression."
+        },
+        "Benzodiazepines": {
+            "status": "Dangerous",
+            "note": "The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "MAOIs": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "Opioids": {
+        "Mushrooms": {
+            "status": "Low Risk & No Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & No Synergy"
+        },
+        "DMT": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Mescaline": {
+            "status": "Low Risk & No Synergy"
+        },
+        "DOx": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions."
+        },
+        "NBOMes": {
+            "status": "Low Risk & No Synergy"
+        },
+        "2C-x": {
+            "status": "Low Risk & No Synergy"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & No Synergy",
+            "note": "No expected interactions, some opioids have serotonin action, and could lead to Serotonin Syndrome or a seizure. These are pretty much only to Pentazocine, Methadone, Tramadol, Tapenatdol."
+        },
+        "aMT": {
+            "status": "Low Risk & No Synergy",
+            "note": "No unexpected interactions"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Dangerous",
+            "note": "Both substances bring a risk of vomiting and unconsciousness. If the user falls unconscious while under the influence there is a severe risk of vomit aspiration if they are not placed in the recovery position."
+        },
+        "MXE": {
+            "status": "Dangerous",
+            "note": "This combination can potentiate the effects of the opioid"
+        },
+        "DXM": {
+            "status": "Dangerous",
+            "note": "CNS depression, difficult breathing, heart issues, hepatoxic, just very unsafe combination all around. Additionally if one takes dxm, their tolerance of opiates goes down slightly, thus causing additional synergistic effects."
+        },
+        "PCP": {
+            "status": "Caution",
+            "note": "PCP can reduce opioid tolerance, increasing the risk of overdose"
+        },
+        "Nitrous": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Amphetamines": {
+            "status": "Caution",
+            "note": "Stimulants increase respiration rate allowing a higher dose of opiates. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "MDMA": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Cocaine": {
+            "status": "Dangerous",
+            "note": "Stimulants increase respiration rate allowing a higher dose of opiates. If the stimulant wears off first then the opiate may overcome the patient and cause respiratory arrest."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Memory blackouts are likely"
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position"
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Concomitant use of tramadol increases the seizure risk in patients taking other opioids. These agents are often individually epileptogenic and may have additive effects on seizure threshold during coadministration. Central nervous system- and/or respiratory-depressant effects may be additively or synergistically present"
+        },
+        "Benzodiazepines": {
+            "status": "Dangerous",
+            "note": "Central nervous system and/or respiratory-depressant effects may be additively or synergistically present. The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position Blackouts/memory loss likely"
+        },
+        "MAOIs": {
+            "status": "Caution",
+            "note": "Coadministration of monoamine oxidase inhibitors (MAOIs) with certain opioids has been associated with rare reports of severe and fatal adverse reactions. There appear to be two types of interaction, an excitatory and a depressive one. Symptoms of the excitatory reaction may include agitation, headache, diaphoresis, hyperpyrexia, flushing, shivering, myoclonus, rigidity, tremor, diarrhea, hypertension, tachycardia, seizures, and coma. Death has occurred in some cases."
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy",
+            "note": "There have been very infrequent reports of a risk of serotonin syndrome with this combination, though this should not be a practical concern."
+        }
+    },
+    "Tramadol": {
+        "Mushrooms": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "LSD": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "DMT": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "Mescaline": {
+            "status": "Unsafe",
+            "note": "This combination can cause seizures due to the lowering of the threshold by tramadol and the potential of mescaline to cause seziures."
+        },
+        "DOx": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics also cause occasional seizures."
+        },
+        "NBOMes": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and NBOMes have also shown a tendency to cause severe seizures"
+        },
+        "2C-x": {
+            "status": "Unsafe",
+            "note": "Tramadol is well known to lower seizure threshold and psychedelics raise the risk of seizures."
+        },
+        "2C-T-x": {
+            "status": "Unsafe"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Unsafe"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Dangerous"
+        },
+        "MXE": {
+            "status": "Dangerous"
+        },
+        "DXM": {
+            "status": "Dangerous"
+        },
+        "PCP": {
+            "status": "Dangerous"
+        },
+        "Nitrous": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely."
+        },
+        "Amphetamines": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "MDMA": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "Cocaine": {
+            "status": "Dangerous",
+            "note": "Tramadol and stimulants both increase the risk of seizures."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Heavy CNS depressants, risk of seizures. Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess. Memory blackouts are likely."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "The sedative effects of this combination can lead to dangerous respiratory depression."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "Concomitant use of tramadol increases the seizure risk in patients taking other opioids. These agents are often individually epileptogenic and may have additive effects on seizure threshold during coadministration. Central nervous system- and/or respiratory-depressant effects may be additively or synergistically present"
+        },
+        "Benzodiazepines": {
+            "status": "Dangerous",
+            "note": "Central nervous system- and/or respiratory-depressant effects may be additively or synergistically present. Vomit aspiration a risk when passed out, lay down in recovery position if ingested."
+        },
+        "MAOIs": {
+            "status": "Dangerous"
+        },
+        "SSRIs": {
+            "status": "Dangerous"
+        }
+    },
+    "Benzodiazepines": {
+        "Mushrooms": {
+            "status": "Low Risk & Decrease"
+        },
+        "LSD": {
+            "status": "Low Risk & Decrease"
+        },
+        "DMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Decrease"
+        },
+        "DOx": {
+            "status": "Low Risk & Decrease"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "aMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Decrease"
+        },
+        "Ketamine": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. Place affected patients in the recovery position to prevent vomit aspiration from excess."
+        },
+        "DXM": {
+            "status": "Caution",
+            "note": "Small doses of benzos can end a bad trip, but both substances potentiate the ataxia and sedation caused by the other and this can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "Both substances potentiate the ataxia and sedation caused by the other and can lead to unexpected loss of consciousness at high doses. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Memory blackouts are likely"
+        },
+        "Nitrous": {
+            "status": "Low Risk & Decrease"
+        },
+        "Amphetamines": {
+            "status": "Low Risk & Decrease",
+            "note": "Both can dull each other's effects, so if one wears off before the other it's possible to overdose due to the lack of counteraction"
+        },
+        "MDMA": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cocaine": {
+            "status": "Low Risk & Decrease"
+        },
+        "Caffeine": {
+            "status": "Low Risk & Decrease"
+        },
+        "Alcohol": {
+            "status": "Dangerous",
+            "note": "Ethanol ingestion may potentiate the CNS effects of many benzodiazepines. The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position. Blacking out and memory loss is almost certain."
+        },
+        "GHB/GBL": {
+            "status": "Dangerous",
+            "note": "The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position."
+        },
+        "Opioids": {
+            "status": "Dangerous",
+            "note": "Central nervous system and/or respiratory-depressant effects may be additively or synergistically present. The two substances potentiate each other strongly and unpredictably, very rapidly leading to unconsciousness. While unconscious, vomit aspiration is a risk if not placed in the recovery position Blackouts/memory loss likely"
+        },
+        "Tramadol": {
+            "status": "Dangerous",
+            "note": "Central nervous system- and/or respiratory-depressant effects may be additively or synergistically present. Vomit aspiration a risk when passed out, lay down in recovery position if ingested."
+        },
+        "MAOIs": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Low Risk & No Synergy"
+        }
+    },
+    "MAOIs": {
+        "Mushrooms": {
+            "status": "Low Risk & Synergy"
+        },
+        "LSD": {
+            "status": "Low Risk & Decrease"
+        },
+        "DMT": {
+            "status": "Low Risk & Synergy"
+        },
+        "Mescaline": {
+            "status": "Caution"
+        },
+        "DOx": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "NBOMes": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "2C-x": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably"
+        },
+        "2C-T-x": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably, which could be dangerous given the unpredictability of the 2C-T-x series"
+        },
+        "aMT": {
+            "status": "Dangerous",
+            "note": "aMT is an MAOI on its own. Using enzyme inhibitors can greatly reduce predictability of effects."
+        },
+        "5-MeO-xxT": {
+            "status": "Dangerous"
+        },
+        "Cannabis": {
+            "status": "Low Risk & Synergy"
+        },
+        "Ketamine": {
+            "status": "Caution",
+            "note": "MAO-B inhibitors appear to increase the potency of Ketamine. MAO-A inhbitors have some negative reports associated with the combination but there isn't much information available"
+        },
+        "MXE": {
+            "status": "Unsafe",
+            "note": "MAO-B inhibitors appear to increase the potency of MXE. MAO-A inhbitors have some negative reports associated with the combination but there isn't much information available"
+        },
+        "DXM": {
+            "status": "Dangerous",
+            "note": "High risk of serotonin syndrome"
+        },
+        "PCP": {
+            "status": "Dangerous",
+            "note": "This combination is very poorly explored"
+        },
+        "Nitrous": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Amphetamines": {
+            "status": "Dangerous",
+            "note": "MAO-B inhibitors can increase the potency and duration of phenethylamines unpredictably. MAO-A inhibitors with amphetamine can lead to hypertensive crises."
+        },
+        "MDMA": {
+            "status": "Dangerous",
+            "note": "MAO-B inhibitors can increase the potency and duration of  phenethylamines unpredictably. MAO-A inhibitors with MDMA will lead to hypertensive crises."
+        },
+        "Cocaine": {
+            "status": "Dangerous",
+            "note": "This combination is poorly explored"
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Unsafe",
+            "note": "Tyramine found in many alcoholic beverages can have dangerous reactions with MAOIs, causing an increase in blood pressure."
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & Synergy"
+        },
+        "Opioids": {
+            "status": "Caution",
+            "note": "Coadministration of monoamine oxidase inhibitors (MAOIs) with certain opioids has been associated with rare reports of severe and fatal adverse reactions. There appear to be two types of interaction, an excitatory and a depressive one. Symptoms of the excitatory reaction may include agitation, headache, diaphoresis, hyperpyrexia, flushing, shivering, myoclonus, rigidity, tremor, diarrhea, hypertension, tachycardia, seizures, and coma. Death has occurred in some cases."
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & Synergy"
+        },
+        "SSRIs": {
+            "status": "Dangerous"
+        }
+    },
+    "SSRIs": {
+        "Mushrooms": {
+            "status": "Low Risk & Decrease"
+        },
+        "LSD": {
+            "status": "Low Risk & Decrease"
+        },
+        "DMT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Mescaline": {
+            "status": "Low Risk & Decrease"
+        },
+        "DOx": {
+            "status": "Low Risk & Decrease"
+        },
+        "NBOMes": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "2C-T-x": {
+            "status": "Low Risk & Decrease"
+        },
+        "aMT": {
+            "status": "Dangerous"
+        },
+        "5-MeO-xxT": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cannabis": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Ketamine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "MXE": {
+            "status": "Caution",
+            "note": "Depending on the SSRI this combination can be unpredictable"
+        },
+        "DXM": {
+            "status": "Dangerous",
+            "note": "High risk of serotonin syndrome."
+        },
+        "PCP": {
+            "status": "Unsafe",
+            "note": "Details of this combination are not well understood but PCP generally interacts in an unpredictable manner."
+        },
+        "Nitrous": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Amphetamines": {
+            "status": "Low Risk & No Synergy"
+        },
+        "MDMA": {
+            "status": "Low Risk & Decrease"
+        },
+        "Cocaine": {
+            "status": "Low Risk & No Synergy",
+            "note": "May reduce each others' effectiveness. Cocaine can reduce mental stability and therefore exacerbate conditions which SSRIs are used to treat."
+        },
+        "Caffeine": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Alcohol": {
+            "status": "Caution",
+            "note": "Alcohol may potentiate some of the pharmacologic effects of CNS-active agents. Use in combination may result in additive central nervous system depression and/or impairment of judgment, thinking, and  psychomotor skills."
+        },
+        "GHB/GBL": {
+            "status": "Low Risk & No Synergy"
+        },
+        "Opioids": {
+            "status": "Low Risk & No Synergy",
+            "note": "There have been very infrequent reports of a risk of serotonin syndrome with this combination, though this should not be a practical concern."
+        },
+        "Tramadol": {
+            "status": "Dangerous"
+        },
+        "Benzodiazepines": {
+            "status": "Low Risk & No Synergy"
+        },
+        "MAOIs": {
+            "status": "Dangerous"
+        }
+    }
+}
