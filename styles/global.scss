@@ -1,9 +1,19 @@
+@import "colors";
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background-color: $background;
+}
+
+* {
+  box-sizing: border-box;
+  color: $primary;
+  font-size: 18px;
 }
 
 a {
@@ -11,6 +21,15 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  height: 100vh;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+}
+
+[class~="hidden"] {
+  display: none !important;
 }

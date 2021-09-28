@@ -1,0 +1,53 @@
+@import "colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  overflow-y: auto;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    min-height: 50px;
+    padding: 10px 12px 10px 20px;
+
+    cursor: pointer;
+
+    background-color: $off-background;
+    &:hover {
+      background-color: $hover;
+    }
+    &:active {
+      background-color: $active;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.substanceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  background-color: $off-background;
+  height: 100%;
+}
