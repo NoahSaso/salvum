@@ -9,15 +9,13 @@ interface Props {
 }
 
 const ROAComponent: FC<Props> = ({ roa: {
-  name,
   bioavailability,
   dosage,
   duration
 } }) => (
   <div className={styles.container}>
-    <h2>{name}</h2>
     {!!bioavailability && (
-      <div className={cn('horizontal', styles.bioavailability)}>
+      <div className="horizontal">
         <p>Bioavailability</p>
         <p>{bioavailability}</p>
       </div>

@@ -7,7 +7,7 @@
   align-items: stretch;
 
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 0 0 4px 4px;
   background: $hover;
 
   p {
@@ -18,13 +18,13 @@
     }
   }
 
-  .bioavailability {
-    margin-top: 4px;
-  }
-
   h3 {
     margin-top: 12px !important;
     margin-bottom: 0 !important;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
   }
 
   .group {

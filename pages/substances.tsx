@@ -1,10 +1,12 @@
 import cn from 'classnames'
 import Head from 'next/head'
-import { FC, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
+import { FiChevronLeft } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
 import { SWRConfig } from 'swr'
 
 import ExternalLinkButton from '../components/external_link_button'
+import Interaction, { InteractionDisclaimer } from '../components/interaction'
 import ROA from '../components/roa'
 import { useSubstances } from '../helpers/swr'
 import { getSubstances } from '../services/data'
@@ -13,9 +15,21 @@ import { NextPageWithFallback } from '../types'
 
 const Substances: FC = () => {
   const { substances, isLoading } = useSubstances()
-  const [selected, setSelected] = useState(-1)
+  const [selectedSubstance, setSelectedSubstance] = useState(-1)
+  // show first ROA by default
+  const [selectedROA, setSelectedROA] = useState(0)
 
-  const substance = selected > -1 ? substances[selected] : null
+  const [selectedInteraction, setSelectedInteraction] = useState(-1)
+  const interactionsHeader = useRef(null)
+
+  // scroll to top of interactions if selected or deselected
+  useEffect(() => {
+    interactionsHeader.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [selectedInteraction])
+
+  const substance = selectedSubstance > -1 ? substances[selectedSubstance] : null
+  const roa = selectedROA > -1 && !!substance?.roas?.length ? substance.roas[selectedROA] : null
+  const interaction = selectedInteraction > -1 && !!substance?.interactions?.length ? substance.interactions[selectedInteraction] : null
 
   return (
     <>
@@ -27,7 +41,7 @@ const Substances: FC = () => {
           {substances.map((substance, idx) => (
             <div
               key={idx}
-              onClick={() => setSelected(idx)}
+              onClick={() => setSelectedSubstance(idx)}
             >
               <p>{substance.name}</p>
             </div>
@@ -63,15 +77,25 @@ const Substances: FC = () => {
 
             {!!substance.roas?.length && (
               <>
-                <h3>Routes of Administration</h3>
-                <div className={styles.roaContainer}>
-                  {substance.roas.map((roa, idx) => (
-                    <ROA
+                <h3>Route{substance.roas.length > 1 ? 's' : ''} of Administration</h3>
+                <div className={styles.roas}>
+                  {substance.roas.map(({ name }, idx) => (
+                    <button
                       key={idx}
-                      roa={roa}
-                    />
+                      onClick={() => setSelectedROA(idx)}
+                      className={cn({
+                        [styles.selected]: selectedROA === idx,
+                        [styles.only]: substance.roas.length === 1,
+                        [styles.small]: substance.roas.length >= 3,
+                      })}
+                    >
+                      {name}
+                    </button>
                   ))}
                 </div>
+                {!!roa && (
+                  <ROA roa={roa} />
+                )}
               </>
             )}
 
@@ -139,16 +163,35 @@ const Substances: FC = () => {
 
             {!!substance.interactions?.length && (
               <>
-                <h3>Interactions</h3>
-                <div className={styles.interactions}>
-                  {substance.interactions.map((interaction, idx) => (
-                    <a
-                      key={idx}
-                    >
-                      {interaction.name}
-                    </a>
-                  ))}
-                </div>
+                <h3 ref={interactionsHeader}>Interactions</h3>
+                {interaction
+                  ? (
+                    <div className={styles.interaction}>
+                      <div
+                        className="horizontal"
+                        onClick={() => setSelectedInteraction(-1)}
+                      >
+                        <FiChevronLeft size={30} />
+                        <h2>{interaction.name}</h2>
+                      </div>
+
+                      <Interaction interaction={interaction} />
+                      <InteractionDisclaimer />
+                    </div>
+                  )
+                  : (
+                    <div className={styles.interactions}>
+                      {substance.interactions.map((interaction, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setSelectedInteraction(idx)}
+                        >
+                          {interaction.name}
+                        </button>
+                      ))}
+                    </div>
+                  )
+                }
               </>
             )}
 

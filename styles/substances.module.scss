@@ -54,11 +54,15 @@
     flex-shrink: 1;
   }
 
-  & > :first-child {
+  & > :first-child,
+  .interaction > :first-child {
     cursor: pointer;
 
     &:hover {
       opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.7;
     }
   }
 
@@ -85,11 +89,51 @@
     margin-bottom: 4px;
   }
 
-  .roaContainer {
-    margin-top: 4px;
+  .roas {
+    width: 100%;
 
-    & > div {
-      margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    button {
+      border: none;
+      padding: 10px 2px;
+      cursor: pointer;
+
+      font-size: 18px;
+      &.small {
+        font-size: 15px;
+      }
+
+      flex: 1;
+
+      background-color: $active;
+      &.selected {
+        background-color: $hover;
+      }
+
+      &.only {
+        cursor: auto;
+        opacity: 1 !important;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+
+      &:first-child {
+        border-top-left-radius: 6px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 6px;
+      }
     }
   }
 
@@ -107,19 +151,45 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    a {
+    button {
       margin: 3px;
       padding: 4px;
       border-radius: 3px;
 
+      border: none;
       background: $hover;
-      cursor: pointer;
 
       &:hover {
         opacity: 0.8;
       }
       &:active {
         opacity: 0.7;
+      }
+    }
+  }
+
+  .interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 4px;
+    background: $hover;
+
+    & > :first-child {
+      align-self: stretch;
+      margin-bottom: 20px;
+
+      & > svg {
+        margin-right: -30px;
+      }
+
+      h2 {
+        font-weight: normal;
+        flex: 1;
+        text-align: center;
       }
     }
   }
