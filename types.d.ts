@@ -2,6 +2,12 @@ import type { NextPage } from 'next'
 
 export type NextPageWithFallback = NextPage<{ fallback: { [key: string]: any } }>
 
+export type PlausibleEvents = {
+  substance: { name: string }
+  substanceROA: { substance: string; name: string }
+  substanceInteraction: { substance: string; otherSubstance: string }
+}
+
 // https://app.quicktype.io
 export interface Substance {
   url:                string

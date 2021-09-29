@@ -1,7 +1,8 @@
 import cn from 'classnames'
 import fuzzysort from 'fuzzysort'
 import Head from 'next/head'
-import { FC, useEffect, useRef, useState } from 'react'
+import { usePlausible } from 'next-plausible'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { FiChevronLeft } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
 import { SWRConfig } from 'swr'
@@ -12,12 +13,27 @@ import ROA from '../components/roa'
 import { useSubstances } from '../helpers/swr'
 import { getSubstances } from '../services/data'
 import styles from '../styles/substances.module.scss'
-import { NextPageWithFallback, Substance } from '../types'
+import { NextPageWithFallback, PlausibleEvents, Substance } from '../types'
 
 let currentSubstanceFilter = 0
 
+const getROA = (substance: Substance | null, roaIndex: number) =>
+  roaIndex > -1 &&
+  !!substance?.roas?.length &&
+  roaIndex < substance!.roas!.length
+    ? substance.roas[roaIndex]
+    : substance?.roas[0]
+
+const getInteraction = (substance: Substance | null, interactionIndex: number) =>
+  interactionIndex > -1 &&
+  !!substance?.interactions?.length &&
+  interactionIndex < substance!.interactions!.length
+    ? substance.interactions[interactionIndex]
+    : null
+
 const Substances: FC = () => {
   const { substances, isLoading } = useSubstances()
+  const plausible = usePlausible<PlausibleEvents>()
 
   const searchRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
@@ -30,8 +46,10 @@ const Substances: FC = () => {
 
   // show first ROA by default
   const [selectedROA, setSelectedROA] = useState(0)
+  const resetROA = () => setSelectedROA(0)
 
   const [selectedInteraction, setSelectedInteraction] = useState(-1)
+  const resetInteraction = () => setSelectedInteraction(-1)
   const interactionsHeader = useRef<HTMLHeadingElement>(null )
 
   // scroll to top of interactions if selected or deselected
@@ -86,29 +104,53 @@ const Substances: FC = () => {
   useEffect(() => {
     searchRef.current?.blur()
 
-    setSelectedROA(0)
-    setSelectedInteraction(-1)
-  }, [substance])
+    resetROA()
+    resetInteraction()
+
+    // record plausible event on substance selection
+    if (substance)
+      plausible('substance', {
+        props: { name: substance.name }
+      })
+  }, [substance, plausible])
 
   // focus search bar on render
   useEffect(() => {
     searchRef.current?.focus()
   }, [])
 
-  const roa =
-    selectedROA > -1 &&
-    !!substance?.roas?.length &&
-    selectedROA < substance!.roas!.length
-      ? substance.roas[selectedROA]
-      : substance?.roas[0]
-  const interaction =
-    selectedInteraction > -1 &&
-    !!substance?.interactions?.length &&
-    selectedInteraction < substance!.interactions!.length
-      ? substance.interactions[selectedInteraction]
-      : null
+  const roa = getROA(substance, selectedROA)
+  const interaction = getInteraction(substance, selectedInteraction)
 
   const showingSubstance = !!substance && !searchFocused
+
+  // plausible state helpers
+
+  const selectROA = useCallback((roa: number) => {
+    setSelectedROA(roa)
+
+    const { name } = getROA(substance, roa) || {}
+    if (substance && name)
+      plausible('substanceROA', {
+        props: {
+          substance: substance.name,
+          name
+        }
+      })
+  }, [setSelectedROA, plausible, substance])
+
+  const selectInteraction = useCallback((interaction: number) => {
+    setSelectedInteraction(interaction)
+
+    const { name } = getInteraction(substance, interaction) || {}
+    if (substance && name)
+      plausible('substanceInteraction', {
+        props: {
+          substance: substance.name,
+          otherSubstance: name
+        }
+      })
+  }, [setSelectedInteraction, plausible, substance])
 
   return (
     <>
@@ -124,7 +166,10 @@ const Substances: FC = () => {
           value={search}
           onChange={({ target: { value } }) => setSearch(value)}
           // on enter, select first substance
-          onKeyDown={({ key, keyCode }) => (key === 'Enter' || keyCode === 13) && setSelectedSubstance(filteredSubstances[0])}
+          onKeyDown={({ key, keyCode }) =>
+            (key === 'Enter' || keyCode === 13) &&
+            setSelectedSubstance(filteredSubstances[0])
+          }
           onFocus={() => setSearchFocused(true)}
           onBlur={() => setSearchFocused(false)}
         />
@@ -179,7 +224,7 @@ const Substances: FC = () => {
                   {substance.roas.map(({ name }, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setSelectedROA(idx)}
+                      onClick={() => selectROA(idx)}
                       className={cn({
                         [styles.selected]: selectedROA === idx,
                         [styles.only]: substance.roas.length === 1,
@@ -266,7 +311,7 @@ const Substances: FC = () => {
                     <div className={styles.interaction}>
                       <div
                         className="horizontal"
-                        onClick={() => setSelectedInteraction(-1)}
+                        onClick={resetInteraction}
                       >
                         <FiChevronLeft size={30} />
                         <h2>{interaction.name}</h2>
@@ -281,7 +326,7 @@ const Substances: FC = () => {
                       {substance.interactions.map((interaction, idx) => (
                         <button
                           key={idx}
-                          onClick={() => setSelectedInteraction(idx)}
+                          onClick={() => selectInteraction(idx)}
                         >
                           {interaction.name}
                         </button>
