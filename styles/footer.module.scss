@@ -1,0 +1,40 @@
+@import "colors";
+@import "constants";
+
+.container {
+  height: $footer-height;
+  background-color: $hover;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+    // clip so border radius cuts off corners of child buttons
+  overflow: clip;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    p {
+      font-size: 14px;
+    }
+
+    p, svg > * {
+      color: $quaternary;
+    }
+
+    &.active {
+      p, svg > * {
+        color: $primary;
+      }
+    }
+  }
+}

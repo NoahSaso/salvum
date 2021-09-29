@@ -1,4 +1,5 @@
 @import "colors";
+@import "constants";
 
 html,
 body {
@@ -26,8 +27,11 @@ p, h1, h2, h3 {
 }
 
 main {
-  height: 100vh;
+  height: calc(100vh - $footer-height);
+  padding-bottom: 4px;
+}
 
+[class~="centered"] {
   width: 100%;
   max-width: 500px;
 

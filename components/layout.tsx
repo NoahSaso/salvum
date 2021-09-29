@@ -22,7 +22,7 @@ const Layout: FC = ({ children }) => (
     </Head>
 
     <Header />
-    <main>{children}</main>
+    <main className="centered">{children}</main>
     <Footer />
   </>
 )
