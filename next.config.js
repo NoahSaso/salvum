@@ -2,6 +2,8 @@
 
 const { withPlausibleProxy } = require('next-plausible')
 
-module.exports = withPlausibleProxy()({
+module.exports = withPlausibleProxy({
+  customDomain: "plausible.noahsaso.com"
+})({
   reactStrictMode: true,
 })
