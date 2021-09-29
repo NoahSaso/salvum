@@ -144,7 +144,8 @@ const Substances: FC = () => {
       plausible('substanceROA', {
         props: {
           substance: substance.name,
-          roa: name
+          roa: name,
+          combined: `${substance.name} > ${roa}`
         }
       })
   }
@@ -161,7 +162,8 @@ const Substances: FC = () => {
       plausible('substanceInteraction', {
         props: {
           substance: substance.name,
-          otherSubstance: name
+          otherSubstance: name,
+          combined: `${substance.name} + ${name}`
         }
       })
   }
