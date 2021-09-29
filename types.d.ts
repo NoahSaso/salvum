@@ -4,7 +4,7 @@ export type NextPageWithFallback = NextPage<{ fallback: { [key: string]: any } }
 
 export type PlausibleEvents = {
   substance: { name: string }
-  substanceROA: { substance: string; name: string }
+  substanceROA: { substance: string; roa: string }
   substanceInteraction: { substance: string; otherSubstance: string }
 }
 

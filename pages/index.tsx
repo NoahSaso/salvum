@@ -144,7 +144,7 @@ const Substances: FC = () => {
       plausible('substanceROA', {
         props: {
           substance: substance.name,
-          name
+          roa: name
         }
       })
   }
