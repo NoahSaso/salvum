@@ -121,6 +121,10 @@
       padding: 10px 2px;
       cursor: pointer;
 
+      // safari has a default 2px margin for buttons??
+      // that might not be the issue but this is definitely the solution :)
+      margin: 0;
+
       font-size: 18px;
       &.small {
         font-size: 15px;
