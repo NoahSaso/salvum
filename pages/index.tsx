@@ -94,9 +94,9 @@ const Substances: FC = () => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Salvum &gt; Substances</title>
-      </Head>
+      </Head> */}
       <div className={styles.container}>
         <input
           ref={searchRef}
