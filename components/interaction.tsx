@@ -6,10 +6,10 @@ import styles from '../styles/interaction.module.scss'
 import { Interaction } from '../types'
 
 interface Props {
-  interaction: Interaction;
+  interaction: Interaction
 }
 
-type InteractionStatus = keyof typeof INTERACTION_CATEGORIES;
+type InteractionStatus = keyof typeof INTERACTION_CATEGORIES
 const InteractionComponent: FC<Props> = ({ interaction: {
   status,
   note

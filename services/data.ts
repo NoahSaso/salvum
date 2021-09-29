@@ -1,16 +1,16 @@
-import interactions from '../data/interactions.json';
-import substances from '../data/substances.json';
+import interactions from '../data/interactions.json'
+import substances from '../data/substances.json'
 
-export const getInteractions = () => interactions;
+export const getInteractions = () => interactions
 
 // sort substances only once
-let substancesSorted = false;
+let substancesSorted = false
 
 export const getSubstances = () => {
   if (!substancesSorted) {
-    substances.sort((a, b) => a.name.localeCompare(b.name));
-    substancesSorted = true;
+    substances.sort((a, b) => a.name.localeCompare(b.name))
+    substancesSorted = true
   }
 
-  return substances;
-};
+  return substances
+}

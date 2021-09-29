@@ -1,4 +1,4 @@
-import { FaArrowDown, FaArrowUp, FaExclamationTriangle, FaHeartbeat, FaRegDotCircle, FaTimes } from 'react-icons/fa';
+import { FaArrowDown, FaArrowUp, FaExclamationTriangle, FaHeartbeat, FaRegDotCircle, FaTimes } from 'react-icons/fa'
 
 export const INTERACTION_CATEGORIES = {
   'Low Risk & Synergy': {
@@ -37,4 +37,4 @@ export const INTERACTION_CATEGORIES = {
     icon: FaTimes,
     color: '#d12128',
   },
-};
+}

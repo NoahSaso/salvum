@@ -5,7 +5,7 @@ import styles from '../styles/roa.module.scss'
 import { ROA } from '../types'
 
 interface Props {
-  roa: ROA;
+  roa: ROA
 }
 
 const ROAComponent: FC<Props> = ({ roa: {
