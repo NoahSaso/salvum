@@ -120,15 +120,23 @@ const Substances: FC = () => {
 
   // plausible state helpers
 
-  const selectSubstance = (substance: Substance) => {
-    setSelectedSubstance(substance)
+  const selectSubstance = (newSubstance: Substance) => {
+    // don't update if no change
+    if (substance === newSubstance)
+      return
+
+    setSelectedSubstance(newSubstance)
 
     plausible('substance', {
-      props: { name: substance.name }
+      props: { name: newSubstance.name }
     })
   }
 
   const selectROA = (roa: number) => {
+    // don't update if no change
+    if (selectedROA === roa)
+      return
+
     setSelectedROA(roa)
 
     const { name } = getROA(substance, roa) || {}
@@ -142,6 +150,10 @@ const Substances: FC = () => {
   }
 
   const selectInteraction = (interaction: number) => {
+    // don't update if no change
+    if (selectedInteraction === interaction)
+      return
+
     setSelectedInteraction(interaction)
 
     const { name } = getInteraction(substance, interaction) || {}
