@@ -8,7 +8,8 @@ import Layout from '../components/layout'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PlausibleProvider
-      domain="plausible.noahsaso.com"
+      domain="s.noahsaso.com"
+      customDomain="plausible.noahsaso.com"
       trackOutboundLinks
       selfHosted
     >
