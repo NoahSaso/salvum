@@ -50,4 +50,3 @@ export interface Tolerance {
   half: null | string;
   zero: null | string;
 }
-
