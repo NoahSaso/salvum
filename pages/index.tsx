@@ -145,7 +145,7 @@ const Substances: FC = () => {
         props: {
           substance: substance.name,
           roa: name,
-          combined: `${substance.name} > ${roa}`
+          combined: `${substance.name} > ${name}`
         }
       })
   }
