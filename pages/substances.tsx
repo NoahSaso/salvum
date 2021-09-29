@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import fuzzysort from 'fuzzysort'
 import Head from 'next/head'
 import { FC, useEffect, useRef, useState } from 'react'
 import { FiChevronLeft } from 'react-icons/fi'
@@ -11,11 +12,22 @@ import ROA from '../components/roa'
 import { useSubstances } from '../helpers/swr'
 import { getSubstances } from '../services/data'
 import styles from '../styles/substances.module.scss'
-import { NextPageWithFallback } from '../types'
+import { NextPageWithFallback, Substance } from '../types'
+
+let currentSubstanceFilter = 0
 
 const Substances: FC = () => {
   const { substances, isLoading } = useSubstances()
-  const [selectedSubstance, setSelectedSubstance] = useState(-1)
+
+  const searchRef = useRef(null)
+  const listRef = useRef(null)
+
+  const [search, setSearch] = useState('')
+  const [filteredSubstances, setFilteredSubstances] = useState(substances)
+  const [substance, setSelectedSubstance] = useState(null as Substance | null)
+  // show list when focused even if selected substance
+  const [searchFocused, setSearchFocused] = useState(true)
+
   // show first ROA by default
   const [selectedROA, setSelectedROA] = useState(0)
 
@@ -27,9 +39,58 @@ const Substances: FC = () => {
     interactionsHeader.current?.scrollIntoView({ behavior: 'smooth' })
   }, [selectedInteraction])
 
-  const substance = selectedSubstance > -1 ? substances[selectedSubstance] : null
+  const scrollToTop = () => listRef.current?.scroll({ top: 0, behavior: 'smooth' })
+
+  // filter data for search
+  useEffect(() => {
+    let currentSearch = ++currentSubstanceFilter
+    if (!search?.trim())
+      setFilteredSubstances(substances)
+    else
+      fuzzysort
+        .goAsync(search, substances, {
+          keys: ['name', 'aliasesStr'],
+          allowTypo: true,
+        })
+        .then(async result => {
+          // if another filter is running, don't update
+          if (currentSearch !== currentSubstanceFilter)
+            return
+
+          // calculate which aliases to display
+          const augmentedResult = result.map(({ obj }) => ({
+            ...obj,
+            aliasesSubtitle:
+              obj.aliases?.length
+                ? fuzzysort
+                  .go(search, obj.aliases, { allowTypo: true })
+                  .map(r => r.target)
+                  .join(', ')
+                : undefined
+          }))
+
+          // check again bc why not
+          if (currentSearch !== currentSubstanceFilter)
+            return
+
+          setFilteredSubstances(augmentedResult)
+        })
+  }, [search, setFilteredSubstances, substances])
+
+  // scroll to top when substance filter is updated
+  useEffect(() => {
+    scrollToTop()
+  }, [filteredSubstances])
+
+  // blur input on selecting substance
+  useEffect(() => {
+    searchRef.current?.blur()
+  }, [substance])
+
   const roa = selectedROA > -1 && !!substance?.roas?.length ? substance.roas[selectedROA] : null
   const interaction = selectedInteraction > -1 && !!substance?.interactions?.length ? substance.interactions[selectedInteraction] : null
+
+  const showingSubstance = !!substance && !searchFocused
 
   return (
     <>
@@ -37,17 +98,36 @@ const Substances: FC = () => {
         <title>Salvum &gt; Substances</title>
       </Head>
       <div className={styles.container}>
-        <div className={cn(styles.list, { hidden: !!substance })}>
-          {substances.map((substance, idx) => (
+        <input
+          ref={searchRef}
+          className={styles.search}
+          type="text"
+          placeholder="Search for a substance..."
+          value={search}
+          onChange={({ target: { value } }) => setSearch(value)}
+          // on enter, select first substance
+          onKeyDown={({ key, keyCode }) => (key === 'Enter' || keyCode === 13) && setSelectedSubstance(filteredSubstances[0])}
+          onFocus={() => setSearchFocused(true)}
+          onBlur={() => setSearchFocused(false)}
+          autoFocus
+        />
+
+        <div
+          className={cn(styles.list, { hidden: showingSubstance })}
+          ref={listRef}
+        >
+          {filteredSubstances.map(substance => (
             <div
-              key={idx}
-              onClick={() => setSelectedSubstance(idx)}
+              key={substance.name}
+              // onMouseDown instead of onClick so it runs before the search bar's onBlur
+              onMouseDown={() => setSelectedSubstance(substance)}
             >
               <p>{substance.name}</p>
+              {!!substance.aliasesSubtitle && <p>{substance.aliasesSubtitle}</p>}
             </div>
           ))}
         </div>
-        {!!substance && (
+        {showingSubstance && (
           <div className={styles.substanceContainer}>
             <a
               className="horizontal"

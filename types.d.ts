@@ -9,6 +9,7 @@ export interface Substance {
   name:               string;
   aliases:            string[];
   aliasesStr:         string;
+  aliasesSubtitle?:    string; // matched aliases in fuzzysort
   summary:            null | string;
   reagents:           null | string;
   classes:            Classes | null;
