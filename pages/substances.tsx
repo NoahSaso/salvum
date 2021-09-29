@@ -19,8 +19,8 @@ let currentSubstanceFilter = 0
 const Substances: FC = () => {
   const { substances, isLoading } = useSubstances()
 
-  const searchRef = useRef(null)
-  const listRef = useRef(null)
+  const searchRef = useRef<HTMLInputElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
 
   const [search, setSearch] = useState('')
   const [filteredSubstances, setFilteredSubstances] = useState(substances)
@@ -32,7 +32,7 @@ const Substances: FC = () => {
   const [selectedROA, setSelectedROA] = useState(0)
 
   const [selectedInteraction, setSelectedInteraction] = useState(-1)
-  const interactionsHeader = useRef(null)
+  const interactionsHeader = useRef<HTMLHeadingElement>(null )
 
   // scroll to top of interactions if selected or deselected
   useEffect(() => {
