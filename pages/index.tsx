@@ -82,13 +82,31 @@ const Substances: FC = () => {
     scrollToTop()
   }, [filteredSubstances])
 
-  // blur input on selecting substance
+  // blur input on selecting substance and clear selected data
   useEffect(() => {
     searchRef.current?.blur()
+
+    setSelectedROA(0)
+    setSelectedInteraction(-1)
   }, [substance])
 
-  const roa = selectedROA > -1 && !!substance?.roas?.length ? substance.roas[selectedROA] : null
-  const interaction = selectedInteraction > -1 && !!substance?.interactions?.length ? substance.interactions[selectedInteraction] : null
+  // focus search bar on render
+  useEffect(() => {
+    searchRef.current?.focus()
+  }, [])
+
+  const roa =
+    selectedROA > -1 &&
+    !!substance?.roas?.length &&
+    selectedROA < substance!.roas!.length
+      ? substance.roas[selectedROA]
+      : substance?.roas[0]
+  const interaction =
+    selectedInteraction > -1 &&
+    !!substance?.interactions?.length &&
+    selectedInteraction < substance!.interactions!.length
+      ? substance.interactions[selectedInteraction]
+      : null
 
   const showingSubstance = !!substance && !searchFocused
 
@@ -109,7 +127,6 @@ const Substances: FC = () => {
           onKeyDown={({ key, keyCode }) => (key === 'Enter' || keyCode === 13) && setSelectedSubstance(filteredSubstances[0])}
           onFocus={() => setSearchFocused(true)}
           onBlur={() => setSearchFocused(false)}
-          autoFocus
         />
 
         <div
