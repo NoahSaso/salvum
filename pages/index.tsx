@@ -106,13 +106,7 @@ const Substances: FC = () => {
 
     resetROA()
     resetInteraction()
-
-    // record plausible event on substance selection
-    if (substance)
-      plausible('substance', {
-        props: { name: substance.name }
-      })
-  }, [substance, plausible])
+  }, [substance])
 
   // focus search bar on render
   useEffect(() => {
@@ -126,7 +120,15 @@ const Substances: FC = () => {
 
   // plausible state helpers
 
-  const selectROA = useCallback((roa: number) => {
+  const selectSubstance = (substance: Substance) => {
+    setSelectedSubstance(substance)
+
+    plausible('substance', {
+      props: { name: substance.name }
+    })
+  }
+
+  const selectROA = (roa: number) => {
     setSelectedROA(roa)
 
     const { name } = getROA(substance, roa) || {}
@@ -137,9 +139,9 @@ const Substances: FC = () => {
           name
         }
       })
-  }, [setSelectedROA, plausible, substance])
+  }
 
-  const selectInteraction = useCallback((interaction: number) => {
+  const selectInteraction = (interaction: number) => {
     setSelectedInteraction(interaction)
 
     const { name } = getInteraction(substance, interaction) || {}
@@ -150,7 +152,7 @@ const Substances: FC = () => {
           otherSubstance: name
         }
       })
-  }, [setSelectedInteraction, plausible, substance])
+  }
 
   return (
     <>
@@ -168,7 +170,7 @@ const Substances: FC = () => {
           // on enter, select first substance
           onKeyDown={({ key, keyCode }) =>
             (key === 'Enter' || keyCode === 13) &&
-            setSelectedSubstance(filteredSubstances[0])
+            selectSubstance(filteredSubstances[0])
           }
           onFocus={() => setSearchFocused(true)}
           onBlur={() => setSearchFocused(false)}
@@ -182,7 +184,7 @@ const Substances: FC = () => {
             <div
               key={substance.name}
               // onMouseDown instead of onClick so it runs before the search bar's onBlur
-              onMouseDown={() => setSelectedSubstance(substance)}
+              onMouseDown={() => selectSubstance(substance)}
             >
               <p>{substance.name}</p>
               {!!substance.aliasesSubtitle && <p>{substance.aliasesSubtitle}</p>}
