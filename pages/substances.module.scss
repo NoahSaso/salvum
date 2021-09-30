@@ -1,15 +1,39 @@
 @import "colors";
 
-.search {
-  background-color: $hover;
-  border: none;
-  outline: none;
-
-  padding: 16px 20px;
+.header {
   margin-bottom: 4px;
+  width: 100%;
 
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  & > * {
+    background: $hover;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    padding: 2px;
+    margin-right: 2px;
+
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    flex: 1;
+
+    padding: 16px 20px;
+
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
 }
 
 .list {
@@ -31,10 +55,10 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $hover;
+      background: $hover;
     }
     &:active {
-      background-color: $active;
+      background: $active;
     }
 
     p:nth-child(2) {
@@ -55,6 +79,10 @@
     margin: 0;
     font-size: 22px;
     flex-shrink: 1;
+  }
+
+  p {
+    word-break: break-word;
   }
 
   & > :first-child,
@@ -106,9 +134,7 @@
     overflow: hidden;
 
     button {
-      border: none;
       padding: 10px 2px;
-      cursor: pointer;
 
       // safari has a default 2px margin for buttons??
       // that might not be the issue but this is definitely the solution :)
@@ -121,21 +147,14 @@
 
       flex: 1;
 
-      background-color: $active;
+      background: $active;
       &.selected {
-        background-color: $hover;
+        background: $hover;
       }
 
       &.only {
         cursor: auto;
         opacity: 1 !important;
-      }
-
-      &:hover {
-        opacity: 0.8;
-      }
-      &:active {
-        opacity: 0.7;
       }
     }
   }
@@ -159,16 +178,7 @@
       padding: 4px;
       border-radius: 3px;
 
-      border: none;
       background: $hover;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.8;
-      }
-      &:active {
-        opacity: 0.7;
-      }
     }
   }
 

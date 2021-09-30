@@ -17,7 +17,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    background-color: $hover;
+    background: $hover;
     border: none;
     outline: none;
 
@@ -32,16 +32,7 @@
       padding: 4px;
       border-radius: 3px;
 
-      border: none;
       background: $active;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.8;
-      }
-      &:active {
-        opacity: 0.7;
-      }
 
       &.selected {
         color: $background;

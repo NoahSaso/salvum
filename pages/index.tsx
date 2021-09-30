@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import fuzzysort from 'fuzzysort'
 import { usePlausible } from 'next-plausible'
-import { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { FiChevronLeft } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
 import { SWRConfig } from 'swr'
@@ -40,8 +40,7 @@ const Substances: FC = () => {
   const [search, setSearch] = useState('')
   const [filteredSubstances, setFilteredSubstances] = useState(substances)
   const [substance, setSelectedSubstance] = useState(null as Substance | null)
-  // show list when focused even if selected substance
-  const [searchFocused, setSearchFocused] = useState(true)
+  const [listShowing, setListShowing] = useState(true)
 
   // show first ROA by default
   const [selectedROA, setSelectedROA] = useState(0)
@@ -115,11 +114,13 @@ const Substances: FC = () => {
   const roa = getROA(substance, selectedROA)
   const interaction = getInteraction(substance, selectedInteraction)
 
-  const showingSubstance = !!substance && !searchFocused
+  const showingSubstance = !!substance && !listShowing
 
   // plausible state helpers
 
   const selectSubstance = (newSubstance: Substance) => {
+    setListShowing(false)
+
     // don't update if no change
     if (substance === newSubstance)
       return
@@ -169,21 +170,30 @@ const Substances: FC = () => {
 
   return (
     <>
-      <input
-        ref={searchRef}
-        className={styles.search}
-        type="text"
-        placeholder="Search for a substance..."
-        value={search}
-        onChange={({ target: { value } }) => setSearch(value)}
-        // on enter, select first substance
-        onKeyDown={({ key, keyCode }) =>
-          (key === 'Enter' || keyCode === 13) &&
-          selectSubstance(filteredSubstances[0])
-        }
-        onFocus={() => setSearchFocused(true)}
-        onBlur={() => setSearchFocused(false)}
-      />
+      <div className={styles.header}>
+        {!listShowing && (
+          <button
+            onClick={() => setListShowing(true)}
+          >
+            <FiChevronLeft size={24} />
+          </button>
+        )}
+
+        <input
+          ref={searchRef}
+          className={styles.search}
+          type="text"
+          placeholder="Search for a substance..."
+          value={search}
+          onChange={({ target: { value } }) => setSearch(value)}
+          // on enter, select first substance
+          onKeyDown={({ key, keyCode }) =>
+            (key === 'Enter' || keyCode === 13) &&
+            selectSubstance(filteredSubstances[0])
+          }
+          onFocus={() => setListShowing(true)}
+        />
+      </div>
 
       <div
         className={cn(styles.list, { hidden: showingSubstance })}

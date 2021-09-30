@@ -6,7 +6,8 @@
 
   padding: 14px;
 
-  h1, h2 {
+  h1,
+  h2 {
     margin-bottom: 10px;
   }
 
@@ -23,7 +24,7 @@
     padding: 12px;
     margin-top: 4px;
 
-    background-color: $hover;
+    background: $hover;
     border-radius: 6px;
   }
 

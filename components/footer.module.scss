@@ -3,7 +3,7 @@
 
 .container {
   height: $footer-height;
-  background-color: $hover;
+  background: $hover;
 
   display: flex;
   flex-direction: row;
@@ -42,11 +42,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  
+
       p {
         font-size: 14px;
       }
-  
+
       opacity: 0.4;
       &.active {
         opacity: 1;
