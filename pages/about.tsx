@@ -17,9 +17,9 @@ const About: FC = () => {
 
       <div className={styles.card}>
         <p>
-          My name is Noah, and I believe open access to information is one of the best tools we have to support people
-          in dangerous situations and fight stigma and prejudice caused by the War on Drugs. Salvum consolidates harm
-          reduction resources in one place in an effort to make safety in altered states of consciousness as
+          My name is Noah, and I believe open access to information is one of the best tools we have to support
+          well-being while fighting stigma and prejudice caused by the War on Drugs. Salvum consolidates harm
+          reduction resources in one place in an effort to make safety in or around altered states of consciousness as
           easy as possible.
         </p>
       </div>
