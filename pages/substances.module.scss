@@ -103,7 +103,7 @@
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     // clip so border radius cuts off corners of child buttons
-    overflow: clip;
+    overflow: hidden;
 
     button {
       border: none;
