@@ -1,0 +1,29 @@
+@import "colors";
+
+.container {
+  margin: 30px 2% 0 2%;
+  overflow-y: auto;
+
+  padding: 14px;
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    padding: 12px;
+    margin-top: 10px;
+
+    background-color: $hover;
+    border-radius: 6px;
+  }
+
+  .support > * {
+    margin-top: 4px;
+  }
+}

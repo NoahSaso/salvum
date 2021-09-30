@@ -2,6 +2,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
+import { AiFillInfoCircle, AiOutlineInfoCircle } from "react-icons/ai"
 import { GiAtom } from 'react-icons/gi'
 import { IoGitNetworkOutline } from 'react-icons/io5'
 
@@ -23,6 +24,14 @@ const tabs = [
       active: IoGitNetworkOutline
     },
     href: '/interactions',
+  },
+  {
+    label: 'About',
+    icon: {
+      inactive: AiOutlineInfoCircle,
+      active: AiFillInfoCircle
+    },
+    href: '/about',
   },
 ]
 
