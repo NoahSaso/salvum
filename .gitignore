@@ -33,4 +33,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+##### MINE
+
+# deployment
 deploy.sh
+
+# next-pwa stuff
+public/fallback-development.js
+public/workbox-*.js*
+public/sw.js*
+public/worker-*.js*

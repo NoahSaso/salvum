@@ -15,6 +15,12 @@ const Layout: FC = ({ children }) => (
       {/* General */}
       <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+      {/* PWA */}
+      <link rel="manifest" href="/manifest.webmanifest" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name='apple-mobile-web-app-title' content={TITLE} />
+
       {/* SEO */}
       <meta name="description" content={DESCRIPTION} />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -33,9 +39,16 @@ const Layout: FC = ({ children }) => (
       <meta property="og:description" content={DESCRIPTION} />
       <meta property="og:site_name" content={TITLE} />
 
+      {/* Theme stuff */}
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#111111" />
+
       {/* Icon stuff */}
       <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       {/* https://iosresolutions.com */}
       {/* iPhone 4, 4s */}
       <link
@@ -192,15 +205,6 @@ const Layout: FC = ({ children }) => (
         media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
         href="/splash/2732x2048.png"
       />
-
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/manifest.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-      <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#111111" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     </Head>
 
     <Header />
