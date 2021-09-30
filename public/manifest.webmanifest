@@ -1,0 +1,40 @@
+{
+    "name": "Salvum",
+    "short_name": "Salvum",
+    "start_url": "/?source=pwa",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#111111",
+    "background_color": "#111111",
+    "display": "standalone",
+    "shortcuts": [
+        {
+            "name": "Substances",
+            "short_name": "Substances",
+            "description": "View substance information",
+            "url": "/?source=pwa"
+        },
+        {
+            "name": "Interactions",
+            "short_name": "Interactions",
+            "description": "View substance interaction information",
+            "url": "/interactions?source=pwa"
+        },
+        {
+            "name": "About",
+            "short_name": "About",
+            "description": "About the website",
+            "url": "/about?source=pwa"
+        }
+    ]
+}
