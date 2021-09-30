@@ -2,7 +2,8 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { IoGitNetworkOutline,IoInformationCircle,IoInformationCircleOutline } from 'react-icons/io5'
+import { GiAtom } from 'react-icons/gi'
+import { IoGitNetworkOutline } from 'react-icons/io5'
 
 import styles from './footer.module.scss'
 
@@ -10,8 +11,8 @@ const tabs = [
   {
     label: 'Substances',
     icon: {
-      inactive: IoInformationCircleOutline,
-      active: IoInformationCircle
+      inactive: GiAtom,
+      active: GiAtom
     },
     href: '/',
   },

@@ -21,6 +21,15 @@
     overflow: clip;
   }
 
+  // iOS only (avoid persistent home bar)
+  @supports (-webkit-touch-callout: none) {
+    height: $ios-footer-height;
+
+    p {
+      font-size: 16px !important;
+    }
+  }
+
   div {
     flex: 1;
 
