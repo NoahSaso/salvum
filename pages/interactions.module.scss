@@ -1,0 +1,63 @@
+@import "colors";
+
+.container {
+  overflow-y: auto;
+
+  .content {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interactions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: $hover;
+    border: none;
+    outline: none;
+
+    padding: 12px;
+    margin-bottom: 4px;
+
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    button {
+      margin: 3px;
+      padding: 4px;
+      border-radius: 3px;
+
+      border: none;
+      background: $active;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+
+      &.selected {
+        color: $background;
+        background: $secondary;
+      }
+    }
+  }
+
+  .interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    border-radius: 6px;
+    background: $hover;
+  }
+}
