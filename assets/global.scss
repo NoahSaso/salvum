@@ -55,9 +55,12 @@ main {
   padding: 4px;
   padding-top: 0;
 
-  // iOS only (avoid persistent home bar)
-  @supports (-webkit-touch-callout: none) {
-    height: calc(100vh - $ios-footer-height);
+  // PWA launched from homescreen
+  @media all and (display-mode: standalone) {
+    // iOS only (avoid persistent home bar)
+    @supports (-webkit-touch-callout: none) {
+      height: calc(100vh - $ios-footer-height);
+    }
   }
 }
 

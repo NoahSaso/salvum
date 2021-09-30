@@ -21,12 +21,16 @@
     overflow: hidden;
   }
 
-  // iOS only (avoid persistent home bar)
-  @supports (-webkit-touch-callout: none) {
-    height: $ios-footer-height;
+  // PWA launched from homescreen
+  @media all and (display-mode: standalone) {
+    // iOS only (avoid persistent home bar)
+    @supports (-webkit-touch-callout: none) {
+      height: $ios-footer-height;
+      padding-bottom: 10px;
 
-    p {
-      font-size: 16px !important;
+      p {
+        font-size: 16px !important;
+      }
     }
   }
 
