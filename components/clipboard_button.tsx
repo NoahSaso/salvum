@@ -8,14 +8,16 @@ interface Props {
   title?: string
   IconComponent?: ComponentType<{ size?: number }>
   data: string
-  containerStyle?: HTMLAttributes<HTMLDivElement>['style']
+  containerStyle?: HTMLAttributes<HTMLDivElement>['style'],
+  callback?: () => void
 }
 
 const ClipboardButton: FC<Props> = ({
   title,
   IconComponent,
   data,
-  containerStyle
+  containerStyle,
+  callback
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [copied, setCopied] = useState(false)
@@ -23,9 +25,9 @@ const ClipboardButton: FC<Props> = ({
   const copy = () => {
     inputRef.current?.select()
     document.execCommand('copy')
-    inputRef.current?.blur()
 
     setCopied(true)
+    callback?.()
   }
 
   const ActionIcon = copied ? IoCheckmark : IoCopyOutline
@@ -35,21 +37,23 @@ const ClipboardButton: FC<Props> = ({
       {!!title && <p>{title}</p>}
 
       <div className={styles.row}>
-        <div className={styles.iconContainer}>
-          {!!IconComponent && <IconComponent size={24} />}
-        </div>
+        {!!IconComponent && (
+          <div className={styles.iconContainer}>
+            <IconComponent size={24} />
+          </div>
+        )}
 
-        <input
-          ref={inputRef}
-          type="text"
-          value={data}
-          onFocus={({ target }) => target.select()}
-          readOnly
-        />
+        <div className={styles.actionContainer} onClick={copy}>
+          <input
+            ref={inputRef}
+            type="text"
+            value={data}
+            onFocus={({ target }) => target.select()}
+            readOnly
+          />
 
-        <button onClick={copy}>
           <ActionIcon size={20} />
-        </button>
+        </div>
       </div>
     </div>
   )

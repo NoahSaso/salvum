@@ -12,43 +12,50 @@
     justify-content: flex-start;
     align-items: stretch;
 
-    .iconContainer, button {
+    .iconContainer {
       display: flex;
       justify-content: center;
       align-items: center;
 
       padding: 10px;
       border-radius: 4px;
-    }
-
-    .iconContainer {
       margin-right: 4px;
       background-color: $hover;
     }
 
-    input {
-      border: none;
-      outline: none;
-      border-radius: 4px;
-      flex: 1;
-      padding: 12px;
-
-      color: $dim;
-      background-color: $hover;
-    }
-
-    button {
-      margin-left: 4px;
+    .actionContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
 
       border: none;
       background-color: $active;
       cursor: pointer;
+
+      background-color: $hover;
+      padding: 10px;
+      border-radius: 4px;
+      flex: 1;
 
       &:hover {
         opacity: 0.8;
       }
       &:active {
         opacity: 0.7;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        flex: 1;
+  
+        color: $dim;
+        background-color: transparent;
+      }
+
+      svg {
+        margin-left: 10px;
       }
     }
   }

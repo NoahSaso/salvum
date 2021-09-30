@@ -7,6 +7,12 @@ export type PlausibleEvents = {
   substanceROA: { substance: string; roa: string; combined: string }
   substanceInteraction: { substance: string; otherSubstance: string; combined: string }
   interaction: { substance: string; otherSubstance: string; combined: string }
+
+  venmo: never
+  xmr: never
+  eth: never
+  ltc: never
+  btc: never
 }
 
 // INTERACTIONS DATA
