@@ -1,4 +1,4 @@
-import '../styles/global.scss'
+import '../assets/global.scss'
 
 import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'

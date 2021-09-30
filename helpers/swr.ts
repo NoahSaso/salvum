@@ -1,29 +1,29 @@
 import useSWR from "swr"
 
-import { Substance } from "../types"
+import { Interactions, Substance } from "../types"
 
 const fetcher = (...args: Parameters<typeof fetch>) => fetch(...args).then(res => res.json())
 
 export const useSubstances = (): {
   substances: Substance[]
-  isLoading: boolean
+  error: any
 } => {
   const { data, error } = useSWR('/api/substances', fetcher)
 
   return {
     substances: data,
-    isLoading: !error && !data,
+    error
   }
 }
 
 export const useInteractions = (): {
-  interactions: any
-  isLoading: boolean
+  interactions: Interactions
+  error: any
 } => {
   const { data, error } = useSWR('/api/interactions', fetcher)
 
   return {
     interactions: data,
-    isLoading: !error && !data,
+    error
   }
 }

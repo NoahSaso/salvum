@@ -2,8 +2,8 @@ import cn from 'classnames'
 import { FC } from 'react'
 
 import { INTERACTION_CATEGORIES } from '../data/interactions'
-import styles from '../styles/interaction.module.scss'
 import { Interaction } from '../types'
+import styles from './interaction.module.scss'
 
 interface Props {
   interaction: Interaction

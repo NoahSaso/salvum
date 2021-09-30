@@ -6,9 +6,49 @@ export type PlausibleEvents = {
   substance: { name: string }
   substanceROA: { substance: string; roa: string; combined: string }
   substanceInteraction: { substance: string; otherSubstance: string; combined: string }
+  interaction: { substance: string; otherSubstance: string; combined: string }
 }
 
-// https://app.quicktype.io
+// INTERACTIONS DATA
+export interface Interaction {
+  status: InteractionStatus
+  note?: string
+}
+
+export type Interactions =
+  Record<InteractionSubstance,
+    Record<InteractionSubstance, Interaction>
+  >
+
+export type InteractionSubstance =
+  | "Mushrooms"
+  | "LSD"
+  | "DMT"
+  | "Mescaline"
+  | "DOx"
+  | "NBOMes"
+  | "2C-x"
+  | "2C-T-x"
+  | "aMT"
+  | "5-MeO-xxT"
+  | "Cannabis"
+  | "Ketamine"
+  | "MXE"
+  | "DXM"
+  | "PCP"
+  | "Nitrous"
+  | "Amphetamines"
+  | "MDMA"
+  | "Cocaine"
+  | "Caffeine"
+  | "Alcohol"
+  | "GHB/GBL"
+  | "Opioids"
+  | "Benzodiazepines"
+  | "MAOIs"
+  | "SSRIs"
+
+// SUBSTANCES DATA (https://app.quicktype.io)
 export interface Substance {
   url:                string
   experiencesUrl:     null | string
@@ -24,7 +64,7 @@ export interface Substance {
   tolerance:          Tolerance | null
   crossTolerances:    string[] | null
   roas:               ROA[]
-  interactions:       Interaction[] | null
+  interactions:       SubstanceInteraction[] | null
 }
 
 export interface Classes {
@@ -32,9 +72,7 @@ export interface Classes {
   psychoactive: string[] | null
 }
 
-export interface Interaction {
-  status: string
-  note?:  string
+export interface SubstanceInteraction extends Interaction {
   name:   string
 }
 

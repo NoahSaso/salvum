@@ -2,7 +2,7 @@ import cn from 'classnames'
 import { FC, HTMLAttributes } from 'react'
 import { IoOpenOutline } from 'react-icons/io5'
 
-import styles from '../styles/external_link_button.module.scss'
+import styles from './external_link_button.module.scss'
 
 interface Props {
   title: string

@@ -1,6 +1,5 @@
 import cn from 'classnames'
 import fuzzysort from 'fuzzysort'
-import Head from 'next/head'
 import { usePlausible } from 'next-plausible'
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { FiChevronLeft } from 'react-icons/fi'
@@ -12,8 +11,8 @@ import Interaction, { InteractionDisclaimer } from '../components/interaction'
 import ROA from '../components/roa'
 import { useSubstances } from '../helpers/swr'
 import { getSubstances } from '../services/data'
-import styles from '../styles/substances.module.scss'
 import { NextPageWithFallback, PlausibleEvents, Substance } from '../types'
+import styles from './substances.module.scss'
 
 let currentSubstanceFilter = 0
 
@@ -32,7 +31,7 @@ const getInteraction = (substance: Substance | null, interactionIndex: number) =
     : null
 
 const Substances: FC = () => {
-  const { substances, isLoading } = useSubstances()
+  const { substances } = useSubstances()
   const plausible = usePlausible<PlausibleEvents>()
 
   const searchRef = useRef<HTMLInputElement>(null)
@@ -170,9 +169,6 @@ const Substances: FC = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>Salvum &gt; Substances</title>
-      </Head> */}
       <div className={styles.container}>
         <input
           ref={searchRef}

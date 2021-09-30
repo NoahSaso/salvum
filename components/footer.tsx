@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { IoGitNetworkOutline,IoInformationCircle,IoInformationCircleOutline } from 'react-icons/io5'
 
-import styles from '../styles/footer.module.scss'
+import styles from './footer.module.scss'
 
 const tabs = [
   {
