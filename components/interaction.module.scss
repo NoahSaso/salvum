@@ -3,6 +3,7 @@
 .category {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   padding: 10px;
@@ -26,12 +27,4 @@
   font-size: 17px;
   margin-top: 30px;
   color: $secondary;
-}
-
-.disclaimer {
-  color: $tertiary;
-  font-size: 16px;
-  font-style: italic;
-
-  margin-top: 20px;
 }

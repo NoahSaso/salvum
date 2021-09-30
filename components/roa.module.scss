@@ -1,11 +1,6 @@
 @import "colors";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-
   padding: 10px;
   border-radius: 0 0 4px 4px;
   background: $hover;

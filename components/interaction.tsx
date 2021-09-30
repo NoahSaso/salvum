@@ -35,7 +35,7 @@ export default InteractionComponent
 
 export const InteractionDisclaimer: FC = () => (
   <a
-    className={styles.disclaimer}
+    className="disclaimer"
     target="_blank"
     rel="noopener noreferrer"
     href="https://wiki.tripsit.me/wiki/Drug_combinations"

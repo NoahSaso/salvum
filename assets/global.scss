@@ -27,6 +27,11 @@ p, h1, h2, h3 {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
   height: calc(100vh - $footer-height);
   padding-bottom: 4px;
 }
@@ -65,4 +70,12 @@ main {
 
     word-break: break-word;
   }
+}
+
+[class~="disclaimer"] {
+  color: $tertiary;
+  font-size: 16px;
+  font-style: italic;
+
+  margin-top: 20px;
 }
