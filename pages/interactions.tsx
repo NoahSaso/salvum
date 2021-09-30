@@ -84,11 +84,18 @@ const Interactions: FC = () => {
       </div>
 
       <div className={styles.content}>
-        {!!interaction && (
-          <div ref={interactionHeader} className={styles.interaction}>
-            <Interaction interaction={interaction} />
-          </div>
-        )}
+        {interaction
+          ? (
+            <div ref={interactionHeader} className={styles.interaction}>
+              <Interaction interaction={interaction} />
+            </div>
+          )
+          : (
+            <p className={styles.instruction}>
+              Choose two substances above to view their interaction profile.
+            </p>
+          )
+        }
 
         <InteractionDisclaimer />
       </div>

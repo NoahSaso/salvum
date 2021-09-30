@@ -63,4 +63,16 @@
     // additional margin for scroll snapping (when scrolling into view, add this around)
     scroll-margin: 16px;
   }
+
+  .instruction {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+
+    color: $secondary;
+
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+  }
 }
