@@ -34,12 +34,14 @@ const Footer: FC = () => {
         const isActive = pathname === href
         const Icon = isActive ? active : inactive
         return (
-          <Link key={href} href={href}>
-            <a className={cn({ [styles.active]: isActive })}>
-              <Icon size={24} />
-              <p>{label}</p>
-            </a>
-          </Link>
+          <div key={href}>
+            <Link href={href}>
+              <a className={cn({ [styles.active]: isActive })}>
+                <Icon size={24} />
+                <p>{label}</p>
+              </a>
+            </Link>
+          </div>
         )
       })}
     </div>
