@@ -10,6 +10,9 @@
   justify-content: center;
   align-items: stretch;
 
+  z-index: 1;
+  flex: none;
+
   // style like dock if over max width
   @media screen and (min-width: $app-max-width) {
     // 4px margin on both sides
@@ -19,15 +22,6 @@
     border-top-right-radius: 6px;
     // clip so border radius cuts off corners of child buttons
     overflow: hidden;
-  }
-
-  // PWA launched from homescreen
-  @media all and (display-mode: standalone) {
-    // iOS only (avoid persistent home bar)
-    @supports (-webkit-touch-callout: none) {
-      height: $ios-footer-height;
-      padding-bottom: 10px;
-    }
   }
 
   div {

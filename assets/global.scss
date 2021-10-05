@@ -12,7 +12,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
+  // cutoff anything below bottom
   overscroll-behavior-y: none;
+  overflow: hidden;
 }
 
 * {
@@ -45,24 +47,43 @@ button {
   }
 }
 
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
 
-  height: calc(100vh - $footer-height);
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
   padding: 4px;
   padding-top: 0;
-
-  // PWA launched from homescreen
-  @media all and (display-mode: standalone) {
-    // iOS only (avoid persistent home bar)
-    @supports (-webkit-touch-callout: none) {
-      height: calc(100vh - $ios-footer-height);
-    }
-  }
 }
+
+// cover up safe inset on bottom
+// #safe-inset-bg {
+//   background: $hover;
+//   position: absolute;
+//   top: 100%;
+
+//   --safe-area-inset-bottom: env(safe-area-inset-bottom);
+//   height: var(--safe-area-inset-bottom);
+// }
 
 [class~="centered"] {
   width: 100%;

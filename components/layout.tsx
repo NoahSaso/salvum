@@ -13,7 +13,7 @@ const Layout: FC = ({ children }) => (
       <title>{TITLE}</title>
 
       {/* General */}
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 
       {/* PWA */}
       <link rel="manifest" href="/manifest.webmanifest" />
@@ -207,9 +207,13 @@ const Layout: FC = ({ children }) => (
       />
     </Head>
 
-    <Header />
-    <main className="centered">{children}</main>
-    <Footer />
+    <div id="container">
+      <Header />
+      <main className="centered">{children}</main>
+      <Footer />
+    </div>
+
+    {/* <div id="safe-inset-bg" className="centered"></div> */}
   </>
 )
 
