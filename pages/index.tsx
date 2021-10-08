@@ -12,7 +12,7 @@ import ROA from '../components/roa'
 import { useSubstances } from '../helpers/swr'
 import { getSubstances } from '../services/data'
 import { NextPageWithFallback, PlausibleEvents, Substance } from '../types'
-import styles from './substances.module.scss'
+import styles from './index.module.scss'
 
 let currentSubstanceFilter = 0
 
