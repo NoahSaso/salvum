@@ -141,3 +141,13 @@ main {
 
   margin-top: 20px;
 }
+
+a[class~="disclaimer"],
+a[class~="opacity-feedback"] {
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
