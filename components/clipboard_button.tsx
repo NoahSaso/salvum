@@ -43,7 +43,7 @@ const ClipboardButton: FC<Props> = ({
           </div>
         )}
 
-        <div className={styles.actionContainer} onClick={copy}>
+        <div className={cn('clickable', styles.actionContainer)} onClick={copy}>
           <input
             ref={inputRef}
             type="text"

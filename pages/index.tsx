@@ -331,7 +331,7 @@ const Substances: FC = () => {
                 ? (
                   <div className={styles.interaction}>
                     <div
-                      className="horizontal"
+                      className="horizontal clickable"
                       onClick={resetInteraction}
                     >
                       <FiChevronLeft size={30} />

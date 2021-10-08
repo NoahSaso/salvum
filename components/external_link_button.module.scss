@@ -6,13 +6,6 @@
   justify-content: flex-start;
   align-items: stretch;
 
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.7;
-  }
-
   .card {
     background: $hover;
     padding: 10px;
