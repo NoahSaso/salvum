@@ -1,0 +1,76 @@
+@import "colors";
+
+.container {
+  margin-top: 30px;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .breatheContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    .outer {
+      width: 140px;
+      height: 140px;
+      border-radius: 70px;
+
+      background: rgb(97, 190, 162);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: breathe 16s infinite;
+
+      .middle {
+        width: 110px;
+        height: 110px;
+        border-radius: 55px;
+  
+        background: rgb(156, 217, 198);
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner {
+          width: 70px;
+          height: 70px;
+          border-radius: 35px;
+    
+          background: rgb(182, 227, 213);
+    
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          p {
+            font-size: 22px;
+            text-align: center;
+            color: $background;
+          }
+        }
+      }
+    }
+
+    .instructions {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes breathe {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.65) }
+  100% { transform: scale(1) }
+}

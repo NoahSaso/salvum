@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { AiFillInfoCircle, AiOutlineInfoCircle } from "react-icons/ai"
 import { GiAtom } from 'react-icons/gi'
-import { IoGitNetworkOutline } from 'react-icons/io5'
+import { IoApps, IoGitNetworkOutline } from 'react-icons/io5'
 
 import styles from './footer.module.scss'
 
@@ -24,6 +24,14 @@ const tabs = [
       active: IoGitNetworkOutline
     },
     href: '/interactions',
+  },
+  {
+    label: 'Apps',
+    icon: {
+      inactive: IoApps,
+      active: IoApps
+    },
+    href: '/apps',
   },
   {
     label: 'About',
