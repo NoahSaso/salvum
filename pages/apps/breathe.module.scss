@@ -1,0 +1,122 @@
+@import "colors";
+
+.container {
+  margin-top: 30px;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .breatheContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    .outer {
+      width: 140px;
+      height: 140px;
+      border-radius: 70px;
+
+      background: rgb(97, 190, 162);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-duration: 4s;
+
+      .middle {
+        width: 110px;
+        height: 110px;
+        border-radius: 55px;
+  
+        background: rgb(156, 217, 198);
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner {
+          width: 70px;
+          height: 70px;
+          border-radius: 35px;
+    
+          background: rgb(182, 227, 213);
+    
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            font-size: 1.5rem;
+            text-align: center;
+            color: $background;
+
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-duration: 4s;
+          }
+        }
+      }
+
+      &.breatheIn {
+        animation-name: breathe-in;
+
+        p {
+          animation-name: inverse-breathe-in;
+        }
+      }
+
+      &.breatheOut {
+        animation-name: breathe-out;
+
+        p {
+          animation-name: inverse-breathe-out;
+        }
+      }
+    }
+
+    .instructions {
+      font-size: 1.5rem;
+      text-align: center;
+
+      margin-top: 4rem;
+    }
+  }
+}
+
+@keyframes breathe-in {
+  from { transform: scale(1) }
+  to { transform: scale(1.65) }
+}
+
+@keyframes inverse-breathe-in {
+  from { transform: scale(1) }
+  to { transform: scale(0.606) }
+}
+
+@keyframes breathe-out {
+  from { transform: scale(1.65) }
+  to { transform: scale(1) }
+}
+
+@keyframes inverse-breathe-out {
+  from { transform: scale(0.606) }
+  to { transform: scale(1) }
+}
+
+// @keyframes breathe {
+//   0% { transform: scale(1) }
+//   25% { transform: scale(1.65) }
+//   50% { transform: scale(1.65) }
+//   75% { transform: scale(1) }
+//   100% { transform: scale(1) }
+// }

@@ -28,6 +28,19 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+[class~="clickable"] {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
 p,
 h1,
 h2,
@@ -37,14 +50,6 @@ h3 {
 
 button {
   border: none;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.7;
-  }
 }
 
 #container {
@@ -127,13 +132,4 @@ main {
   font-style: italic;
 
   margin-top: 20px;
-}
-
-a[class~="disclaimer"] {
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.7;
-  }
 }

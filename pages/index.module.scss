@@ -85,18 +85,6 @@
     word-break: break-word;
   }
 
-  & > :first-child,
-  .interaction > :first-child {
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.8;
-    }
-    &:active {
-      opacity: 0.7;
-    }
-  }
-
   .classes {
     font-size: 17px;
     color: $tertiary;
