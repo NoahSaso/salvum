@@ -29,7 +29,9 @@
       justify-content: center;
       align-items: center;
 
-      animation: breathe 16s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-duration: 4s;
 
       .middle {
         width: 110px;
@@ -52,25 +54,69 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          
+
           p {
-            font-size: 22px;
+            font-size: 1.5rem;
             text-align: center;
             color: $background;
+
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-duration: 4s;
           }
+        }
+      }
+
+      &.breatheIn {
+        animation-name: breathe-in;
+
+        p {
+          animation-name: inverse-breathe-in;
+        }
+      }
+
+      &.breatheOut {
+        animation-name: breathe-out;
+
+        p {
+          animation-name: inverse-breathe-out;
         }
       }
     }
 
     .instructions {
-      font-size: 20px;
+      font-size: 1.5rem;
       text-align: center;
+
+      margin-top: 4rem;
     }
   }
 }
 
-@keyframes breathe {
-  0% { transform: scale(1) }
-  50% { transform: scale(1.65) }
-  100% { transform: scale(1) }
+@keyframes breathe-in {
+  from { transform: scale(1) }
+  to { transform: scale(1.65) }
 }
+
+@keyframes inverse-breathe-in {
+  from { transform: scale(1) }
+  to { transform: scale(0.606) }
+}
+
+@keyframes breathe-out {
+  from { transform: scale(1.65) }
+  to { transform: scale(1) }
+}
+
+@keyframes inverse-breathe-out {
+  from { transform: scale(0.606) }
+  to { transform: scale(1) }
+}
+
+// @keyframes breathe {
+//   0% { transform: scale(1) }
+//   25% { transform: scale(1.65) }
+//   50% { transform: scale(1.65) }
+//   75% { transform: scale(1) }
+//   100% { transform: scale(1) }
+// }
