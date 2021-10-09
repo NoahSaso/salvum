@@ -1,20 +1,17 @@
 @import "colors";
 
 .container {
-  margin: 30px 2% 0 2%;
+  margin: 2rem 2% 0 2%;
   overflow-y: auto;
+
+  padding-bottom: 0.4rem;
 
   h1,
   h2 {
     margin-bottom: 10px;
   }
 
-  h1 {
-    font-size: 26px;
-  }
-
   h2 {
-    font-size: 20px;
     margin-top: 20px;
   }
 

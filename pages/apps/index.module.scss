@@ -1,12 +1,10 @@
 @import "colors";
 
 .container {
-  margin: 30px 2% 0 2%;
+  margin: 2rem 2% 0 2%;
   overflow-y: auto;
 
-  h1 {
-    font-size: 1.6rem;
-  }
+  padding-bottom: 0.4rem;
 
   .card {
     display: flex;
@@ -25,7 +23,6 @@
     }
 
     h2 {
-      font-size: 22px;
       font-weight: normal;
       color: $primary;
     }
