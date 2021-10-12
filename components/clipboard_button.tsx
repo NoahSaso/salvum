@@ -1,12 +1,12 @@
 import cn from 'classnames'
-import { ComponentType, FC, HTMLAttributes, useRef, useState } from 'react'
+import { FC, HTMLAttributes, useRef, useState } from 'react'
 import { IoCheckmark, IoCopyOutline } from 'react-icons/io5'
 
 import styles from './clipboard_button.module.scss'
 
 interface Props {
   title?: string
-  IconComponent?: ComponentType<{ size?: number }>
+  Icon?: JSX.Element
   data: string
   containerStyle?: HTMLAttributes<HTMLDivElement>['style'],
   callback?: () => void
@@ -14,7 +14,7 @@ interface Props {
 
 const ClipboardButton: FC<Props> = ({
   title,
-  IconComponent,
+  Icon,
   data,
   containerStyle,
   callback
@@ -36,14 +36,14 @@ const ClipboardButton: FC<Props> = ({
     <div className={cn(styles.container, containerStyle)}>
       {!!title && <p>{title}</p>}
 
-      <div className={styles.row}>
-        {!!IconComponent && (
+      <div className={cn('clickable', styles.row)} onClick={copy}>
+        {!!Icon && (
           <div className={styles.iconContainer}>
-            <IconComponent size={24} />
+            {Icon}
           </div>
         )}
 
-        <div className={cn('clickable', styles.actionContainer)} onClick={copy}>
+        <div className={styles.actionContainer}>
           <input
             ref={inputRef}
             type="text"

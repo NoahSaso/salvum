@@ -4,7 +4,8 @@
   margin: 2rem 2% 0 2%;
   overflow-y: auto;
 
-  padding-bottom: 0.4rem;
+  // 0.8rem side padding for scroll bar, 0.4rem bottom
+  padding: 0 0.8rem 0.4rem 0.8rem;
 
   h1,
   h2 {
@@ -17,7 +18,7 @@
 
   .card {
     padding: 12px;
-    margin-top: 4px;
+    margin-bottom: 4px;
 
     background: $hover;
     border-radius: 6px;

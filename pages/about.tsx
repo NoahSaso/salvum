@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import { usePlausible } from 'next-plausible'
 import { FC } from 'react'
-import { IoLogoPaypal, IoLogoVenmo } from 'react-icons/io5'
-import { SiBitcoin, SiEthereum, SiLitecoin, SiMonero } from 'react-icons/si'
+import { IoLogoPaypal, IoLogoVenmo, IoMail } from 'react-icons/io5'
+import { SiBitcoin, SiEthereum, SiMonero } from 'react-icons/si'
 
 import ClipboardButton from '../components/clipboard_button'
 import ExternalLinkButton from '../components/external_link_button'
@@ -31,6 +32,12 @@ const About: FC = () => {
         </p>
       </div>
 
+      <ExternalLinkButton
+        LeftIconComponent={IoMail}
+        title="Contact me at noah@salvum.love"
+        url="mailto:noah@salvum.love"
+      />
+
       <h2>Support</h2>
 
       <div className={styles.card}>
@@ -48,27 +55,34 @@ const About: FC = () => {
           url="https://paypal.me/nsaso"
         />
         <ClipboardButton
-          IconComponent={IoLogoVenmo}
+          Icon={<IoLogoVenmo size={24} />}
           data="NoahSaso"
           callback={() => plausible('venmo')}
         />
         <ClipboardButton
-          IconComponent={SiMonero}
+          Icon={<SiMonero size={24} />}
           data="88MbTyekREM45CZRLq8R3KNqCQssTZH9T1du3iiQKxYqjLd3ZR9afgT1Wt5nWA1vYXRP8bANGcm9TA96zdQ6c1NS82owQWX"
           callback={() => plausible('xmr')}
         />
         <ClipboardButton
-          IconComponent={SiEthereum}
+          Icon={<SiEthereum size={24} />}
           data="0x94A47454cFA7409B5a54862538C4320A675F4b29"
           callback={() => plausible('eth')}
         />
         <ClipboardButton
-          IconComponent={SiLitecoin}
-          data="LezM1it7yw482eLsmZPKk7tJapo7GHq2uA"
-          callback={() => plausible('ltc')}
+          Icon={
+            <Image
+              src="/img/solana.svg"
+              width={24}
+              height={24}
+              alt="SOL"
+            />
+          }
+          data="6v7hHrEndb3CNk1RHeu52ovT7DXcWA1Zm5NZg8yq72GX"
+          callback={() => plausible('sol')}
         />
         <ClipboardButton
-          IconComponent={SiBitcoin}
+          Icon={<SiBitcoin size={24} />}
           data="1DXpZnZMSaShaQNTcgwdQBLkd97VeBWxqd"
           callback={() => plausible('btc')}
         />

@@ -11,7 +11,7 @@ export type PlausibleEvents = {
   venmo: never
   xmr: never
   eth: never
-  ltc: never
+  sol: never
   btc: never
 }
 
