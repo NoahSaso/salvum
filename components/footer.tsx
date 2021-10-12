@@ -45,11 +45,12 @@ const tabs = [
 
 const Footer: FC = () => {
   const { pathname } = useRouter()
+  const rootPath = '/' + pathname.split('/')[1]
 
   return (
     <div className={cn('centered', styles.container)}>
       {tabs.map(({ label, icon: { inactive, active }, href }) => {
-        const isActive = pathname === href
+        const isActive = rootPath === href
         const Icon = isActive ? active : inactive
         return (
           <div key={href}>
