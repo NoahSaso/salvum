@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { usePlausible } from 'next-plausible'
 import { FC } from 'react'
-import { IoLogoPaypal, IoLogoVenmo, IoMail, IoCodeSlash } from 'react-icons/io5'
+import { IoCodeSlash, IoLogoPaypal, IoLogoVenmo, IoMail } from 'react-icons/io5'
 import { SiBitcoin, SiEthereum, SiMonero } from 'react-icons/si'
 
 import ClipboardButton from '../components/clipboard_button'
