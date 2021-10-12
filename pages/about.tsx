@@ -102,10 +102,9 @@ const About: FC = () => {
 
         <a
           className={styles.license}
-          rel="license"
           href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="license noopener noreferrer"
         >
           <Image
             src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
