@@ -46,3 +46,6 @@ public/worker-*.js*
 
 # misc
 .vscode
+
+# data periodically updated on backend
+data/substances.json
