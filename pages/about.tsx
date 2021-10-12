@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { usePlausible } from 'next-plausible'
 import { FC } from 'react'
-import { IoLogoPaypal, IoLogoVenmo, IoMail } from 'react-icons/io5'
+import { IoLogoPaypal, IoLogoVenmo, IoMail, IoCodeSlash } from 'react-icons/io5'
 import { SiBitcoin, SiEthereum, SiMonero } from 'react-icons/si'
 
 import ClipboardButton from '../components/clipboard_button'
@@ -42,6 +42,12 @@ const About: FC = () => {
           LeftIconComponent={IoMail}
           title="Contact me at noah@salvum.love"
           url="mailto:noah@salvum.love"
+          containerStyle={{ marginBottom: 4 }}
+        />
+        <ExternalLinkButton
+          LeftIconComponent={IoCodeSlash}
+          title="View source code"
+          url="https://github.com/NoahSaso/salvum"
         />
 
         <h2>Support</h2>
