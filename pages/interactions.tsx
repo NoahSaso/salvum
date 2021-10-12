@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import Head from 'next/head'
 import { usePlausible } from 'next-plausible'
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import { SWRConfig } from 'swr'
@@ -104,9 +105,15 @@ const Interactions: FC = () => {
 }
 
 const InteractionsPage: NextPageWithFallback = ({ fallback }) => (
-  <SWRConfig value={{ fallback }}>
-    <Interactions />
-  </SWRConfig>
+  <>
+    <Head>
+      <title>Salvum | Interactions</title>
+      <meta name="description" content="Quick substance interaction/combination lookup for some commonly used drugs and drug classes." />
+    </Head>
+    <SWRConfig value={{ fallback }}>
+      <Interactions />
+    </SWRConfig>
+  </>
 )
 
 export default InteractionsPage

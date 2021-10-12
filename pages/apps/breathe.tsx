@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import Head from 'next/head'
 import { FC, useEffect, useState } from 'react'
 
 import Header from '../../components/apps/header'
@@ -73,21 +74,27 @@ const Breathe: FC = () => {
   }, [setBreathingIn, setBreathingOut, setCount])
 
   return (
-    <div className={styles.container}>
-      <Header title="Breathe" />
+    <>
+      <Head>
+        <title>Salvum | App: Breathe</title>
+        <meta name="description" content="Guided breathing exercise to help ground yourself." />
+      </Head>
+      <div className={styles.container}>
+        <Header title="Breathe" />
 
-      <div className={styles.breatheContainer}>
-        <div className={cn(styles.outer, { [styles.breatheIn]: breathingIn, [styles.breatheOut]: breathingOut })}>
-          <div className={styles.middle}>
-            <div className={styles.inner}>
-              <p>{count}</p>
+        <div className={styles.breatheContainer}>
+          <div className={cn(styles.outer, { [styles.breatheIn]: breathingIn, [styles.breatheOut]: breathingOut })}>
+            <div className={styles.middle}>
+              <div className={styles.inner}>
+                <p>{count}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <p className={styles.instructions}>{instructions}</p>
+          <p className={styles.instructions}>{instructions}</p>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
