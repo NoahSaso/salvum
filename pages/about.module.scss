@@ -27,4 +27,14 @@
   .support > * {
     margin-top: 4px;
   }
+
+  .license {
+    display: block;
+    margin-top: 3rem;
+
+    p {
+      margin-top: 0.4rem;
+      color: $tertiary;
+    }
+  }
 }

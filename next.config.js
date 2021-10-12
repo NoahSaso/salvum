@@ -9,6 +9,9 @@ module.exports =
     pwa: {
       dest: 'public'
     },
+    images: {
+      domains: ['i.creativecommons.org']
+    },
     ...withPlausibleProxy({
       customDomain: "https://plausible.noahsaso.com"
     })({

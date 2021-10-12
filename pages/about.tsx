@@ -99,6 +99,24 @@ const About: FC = () => {
             callback={() => plausible('btc')}
           />
         </div>
+
+        <a
+          className={styles.license}
+          rel="license"
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+            alt="Creative Commons License"
+            width={88}
+            height={31}
+          />
+          <p>
+            This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+          </p>
+        </a>
       </div>
     </>
   )
