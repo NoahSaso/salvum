@@ -77,11 +77,6 @@ const About: FC = () => {
             callback={() => plausible('xmr')}
           />
           <ClipboardButton
-            Icon={<SiEthereum size={24} />}
-            data="0x94A47454cFA7409B5a54862538C4320A675F4b29"
-            callback={() => plausible('eth')}
-          />
-          <ClipboardButton
             Icon={
               <Image
                 src="/img/solana.svg"
@@ -92,6 +87,11 @@ const About: FC = () => {
             }
             data="6v7hHrEndb3CNk1RHeu52ovT7DXcWA1Zm5NZg8yq72GX"
             callback={() => plausible('sol')}
+          />
+          <ClipboardButton
+            Icon={<SiEthereum size={24} />}
+            data="0x94A47454cFA7409B5a54862538C4320A675F4b29"
+            callback={() => plausible('eth')}
           />
           <ClipboardButton
             Icon={<SiBitcoin size={24} />}
