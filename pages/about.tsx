@@ -85,7 +85,7 @@ const About: FC = () => {
                 alt="SOL"
               />
             }
-            data="6v7hHrEndb3CNk1RHeu52ovT7DXcWA1Zm5NZg8yq72GX"
+            data="7GsQYFVaPDnvfY8AuCKatGH32h5JH6f4KtMwauAaaZ9Z"
             callback={() => plausible('sol')}
           />
           <ClipboardButton
