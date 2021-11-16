@@ -1,9 +1,44 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FC } from 'react'
+import { AnchorHTMLAttributes, FC } from 'react'
 import { FiChevronRight } from 'react-icons/fi'
+import { IoOpenOutline } from 'react-icons/io5'
 
 import styles from './index.module.scss'
+
+interface AppProps {
+  title: string
+  subtitle?: string
+  url: string
+}
+const App: FC<AppProps> = ({ title, subtitle, url }) => {
+  const isExternal = !url.startsWith('/apps')
+
+  const Icon = isExternal
+    ? <IoOpenOutline size={28} />
+    : <FiChevronRight size={32} />
+  const aProps = isExternal
+    ? { href: url, target: '_blank', rel: 'noopener noreferrer' }
+    : {}
+
+  const content = (
+    <a className={styles.card} {...aProps}>
+      <div>
+        <h2>{title}</h2>
+        {!!subtitle && <p>{subtitle}</p>}
+      </div>
+      {Icon}
+    </a>
+  )
+
+  return isExternal
+    ? content
+    : (
+      <Link href={url}>
+        {content}
+      </Link>
+    )
+}
 
 const Apps: FC = () => {
   return (
@@ -15,15 +50,39 @@ const Apps: FC = () => {
       <div className={styles.container}>
         <h1>Apps</h1>
 
-        <Link href="/apps/breathe">
-          <a className={styles.card}>
-            <div>
-              <h2>Breathe</h2>
-              <p>A guided square breath to ground yourself</p>
-            </div>
-            <FiChevronRight size={32} />
-          </a>
-        </Link>
+        <App
+          title="Breathe"
+          subtitle="A guided square breath to ground yourself."
+          url="/apps/breathe"
+        />
+
+        <App
+          title="Colorful Fluid Simulator"
+          subtitle="beautiful visuals"
+          url="https://paveldogreat.github.io/WebGL-Fluid-Simulation"
+        />
+
+        <App
+          title="Colorful Particle Simulator 1"
+          url="http://www.iamnop.com/particles"
+        />
+
+        <App
+          title="Colorful Particle Simulator 2"
+          url="https://testdrive-archive.azurewebsites.net/Graphics/TouchEffects/Default.html"
+        />
+
+        <App
+          title="Iridescent Puddle"
+          subtitle="pretty chaotic"
+          url="http://iridescentpuddle.com"
+        />
+
+        <App
+          title="Geometric Tunnel Visualizer"
+          subtitle="with calm music!"
+          url="https://erppy.co"
+        />
       </div>
     </>
   )

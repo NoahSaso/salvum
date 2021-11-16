@@ -6,6 +6,10 @@
 
   padding-bottom: 0.4rem;
 
+  h1 {
+    margin-bottom: 4px;
+  }
+
   .card {
     display: flex;
     flex-direction: row;
@@ -13,7 +17,7 @@
     align-items: center;
 
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 6px;
 
     background: $hover;
     border-radius: 6px;
