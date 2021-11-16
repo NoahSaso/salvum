@@ -52,36 +52,38 @@ const Apps: FC = () => {
 
         <App
           title="Breathe"
-          subtitle="A guided square breath to ground yourself."
+          subtitle="a guided square breath to ground yourself"
           url="/apps/breathe"
         />
 
         <App
           title="Colorful Fluid Simulator"
-          subtitle="beautiful visuals"
+          subtitle="beautiful visuals &amp; interactive"
           url="https://paveldogreat.github.io/WebGL-Fluid-Simulation"
         />
 
         <App
+          title="Geometric Tunnel Visualizer"
+          subtitle="with calm music"
+          url="https://erppy.co"
+        />
+
+        <App
           title="Colorful Particle Simulator 1"
+          subtitle="interactive only on computer"
           url="http://www.iamnop.com/particles"
         />
 
         <App
           title="Colorful Particle Simulator 2"
+          subtitle="interactive only on computer"
           url="https://testdrive-archive.azurewebsites.net/Graphics/TouchEffects/Default.html"
         />
 
         <App
           title="Iridescent Puddle"
-          subtitle="pretty chaotic"
+          subtitle="pretty chaotic, works better on computer"
           url="http://iridescentpuddle.com"
-        />
-
-        <App
-          title="Geometric Tunnel Visualizer"
-          subtitle="with calm music!"
-          url="https://erppy.co"
         />
       </div>
     </>
