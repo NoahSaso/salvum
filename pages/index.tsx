@@ -1,5 +1,6 @@
 import cn from "classnames"
 import fuzzysort from "fuzzysort"
+import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { usePlausible } from "next-plausible"
@@ -232,6 +233,14 @@ const Substances: FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Salvum{showingSubstance ? ` | ${substance.name}` : ""}</title>
+        <meta
+          name="description"
+          content="Guided breathing exercise to help ground yourself."
+        />
+      </Head>
+
       <div className={styles.header}>
         {!listShowing && (
           <Link href="/">
