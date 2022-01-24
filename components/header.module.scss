@@ -4,7 +4,20 @@
   justify-content: flex-start;
   align-items: center;
 
-  h1 {
-    margin-left: 1rem;
+  margin-top: 2rem;
+
+  position: relative;
+  svg {
+    position: absolute;
   }
+}
+
+.hasBack {
+  margin-left: 3rem;
+}
+
+.centered {
+  text-align: center;
+  width: 100%;
+  margin-left: 0 !important;
 }

@@ -80,7 +80,7 @@ const Breathe: FC = () => {
         <meta name="description" content="Guided breathing exercise to help ground yourself." />
       </Head>
       <div className={styles.container}>
-        <Header title="Breathe" backHref="/apps" />
+        <Header title="Breathe" backHref="/apps" centered />
 
         <div className={styles.breatheContainer}>
           <div className={cn(styles.outer, { [styles.breatheIn]: breathingIn, [styles.breatheOut]: breathingOut })}>

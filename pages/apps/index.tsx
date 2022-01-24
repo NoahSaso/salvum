@@ -4,6 +4,7 @@ import { AnchorHTMLAttributes, FC } from 'react'
 import { FiChevronRight } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
 
+import Header from '../../components/header'
 import styles from './index.module.scss'
 
 interface AppProps {
@@ -48,7 +49,7 @@ const Apps: FC = () => {
         <meta name="description" content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down." />
       </Head>
       <div className={styles.container}>
-        <h1>Apps</h1>
+        <Header title="Apps" />
 
         <App
           title="Breathe"
