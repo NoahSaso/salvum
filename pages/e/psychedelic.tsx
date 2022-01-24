@@ -1,17 +1,9 @@
-import cn from "classnames"
 import Head from "next/head"
 import Link from "next/link"
-import { FC, ReactNode, ReactNodeArray } from "react"
+import { FC } from "react"
 
+import { Container, Section } from "../../components/emergency"
 import Header from "../../components/header"
-import styles from "./psychedelic.module.scss"
-
-interface SectionProps {
-  children: ReactNode | ReactNodeArray
-}
-const Section: FC<SectionProps> = ({ children }) => (
-  <div className={cn("card", styles.section)}>{children}</div>
-)
 
 const Psychedelic: FC = () => (
   <>
@@ -25,7 +17,7 @@ const Psychedelic: FC = () => (
 
     <Header title="Psychedelic" backHref="/emergency" centered />
 
-    <div className={styles.container}>
+    <Container>
       <Section>
         <h1>breathe, relax, let go</h1>
       </Section>
@@ -87,7 +79,7 @@ const Psychedelic: FC = () => (
           yourself, remain calm and contact emergency medical services.
         </p>
       </Section>
-    </div>
+    </Container>
   </>
 )
 
