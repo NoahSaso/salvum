@@ -1,18 +1,16 @@
-import cn from 'classnames'
-import { FC } from 'react'
+import cn from "classnames"
+import { FC } from "react"
 
-import { ROA } from '../types'
-import styles from './roa.module.scss'
+import { ROA } from "../types"
+import styles from "./roa.module.scss"
 
 interface Props {
   roa: ROA
 }
 
-const ROAComponent: FC<Props> = ({ roa: {
-  bioavailability,
-  dosage,
-  duration
-} }) => (
+const ROAComponent: FC<Props> = ({
+  roa: { bioavailability, dosage, duration },
+}) => (
   <div className={styles.container}>
     {!!bioavailability && (
       <div className="horizontal">
@@ -25,10 +23,7 @@ const ROAComponent: FC<Props> = ({ roa: {
       <>
         <h3>Dosage</h3>
         {dosage.map(({ name: level, value, note }, idx) => (
-          <div
-            key={idx}
-            className={cn('horizontal', 'rowGroup', styles.group)}
-          >
+          <div key={idx} className={cn("horizontal", "rowGroup", styles.group)}>
             <p>{level}</p>
             <div>
               {!!value && <p>{value}</p>}
@@ -43,10 +38,7 @@ const ROAComponent: FC<Props> = ({ roa: {
       <>
         <h3>Duration</h3>
         {duration.map(({ name: level, value, note }, idx) => (
-          <div
-            key={idx}
-            className={cn('horizontal', 'rowGroup', styles.group)}
-          >
+          <div key={idx} className={cn("horizontal", "rowGroup", styles.group)}>
             <p>{level}</p>
             <div>
               {!!value && <p>{value}</p>}

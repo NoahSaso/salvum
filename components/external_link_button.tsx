@@ -1,13 +1,13 @@
-import cn from 'classnames'
-import { ComponentType,FC, HTMLAttributes } from 'react'
-import { IoOpenOutline } from 'react-icons/io5'
+import cn from "classnames"
+import { ComponentType, FC, HTMLAttributes } from "react"
+import { IoOpenOutline } from "react-icons/io5"
 
-import styles from './external_link_button.module.scss'
+import styles from "./external_link_button.module.scss"
 
 interface Props {
   title: string
   url: string
-  containerStyle?: HTMLAttributes<HTMLAnchorElement>['style']
+  containerStyle?: HTMLAttributes<HTMLAnchorElement>["style"]
   LeftIconComponent?: ComponentType<{ size?: number }>
 }
 
@@ -15,7 +15,7 @@ const ExternalLinkButton: FC<Props> = ({
   title,
   url,
   containerStyle,
-  LeftIconComponent
+  LeftIconComponent,
 }) => (
   <a
     className={styles.container}
@@ -30,7 +30,7 @@ const ExternalLinkButton: FC<Props> = ({
       </div>
     )}
 
-    <div className={cn('horizontal', styles.card)}>
+    <div className={cn("horizontal", styles.card)}>
       <p>{title}</p>
       <IoOpenOutline size={20} />
     </div>
