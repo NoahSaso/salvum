@@ -6,6 +6,7 @@ import { usePlausible } from 'next-plausible'
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
+import PuffLoader from 'react-spinners/PuffLoader'
 import { SWRConfig } from 'swr'
 
 import ExternalLinkButton from '../components/external_link_button'
@@ -49,6 +50,7 @@ const Substances: FC = () => {
   const [filteredSubstances, setFilteredSubstances] = useState(substances)
   const [substance, setSelectedSubstance] = useState(null as Substance | null)
   const [listShowing, setListShowing] = useState(true)
+  const [loadingSubstance, setLoadingSubstance] = useState(null as Substance | null)
 
   // show first ROA by default
   const [selectedROA, setSelectedROA] = useState(0)
@@ -130,6 +132,17 @@ const Substances: FC = () => {
     searchRef.current?.blur()
   }
 
+  // helper when pressing enter when focused on search bar
+  const selectFirstSubstance = () => {
+    const first = filteredSubstances[0]
+    if (first.name.toLowerCase() === querySubstance.toLowerCase())
+      stayOnCurrentSubstance()
+    else {
+      setLoadingSubstance(first)
+      routerPush(getUrlForSubstance(first))
+    }
+  }
+
   // plausible state helpers
 
   const selectROA = (roa: number) => {
@@ -192,6 +205,7 @@ const Substances: FC = () => {
     } else {
       setSubstanceAndQuery(null, '')
     }
+    setLoadingSubstance(null)
   }, [isReady, substances, querySubstance, setSubstanceAndQuery, loadedQuerySubstance])
 
   if (!isReady) return <div />
@@ -219,11 +233,7 @@ const Substances: FC = () => {
           // on enter, select first substance
           onKeyDown={({ key, keyCode }) =>
             (key === 'Enter' || keyCode === 13) &&
-            (
-              filteredSubstances[0].name.toLowerCase() === querySubstance.toLowerCase()
-                ? stayOnCurrentSubstance()
-                : routerPush(getUrlForSubstance(filteredSubstances[0]))
-            )
+            selectFirstSubstance()
           }
           onFocus={() => setListShowing(true)}
         />
@@ -239,14 +249,18 @@ const Substances: FC = () => {
             href={getUrlForSubstance(filteredSubstance)}
           >
             <a
-              onClick={() => filteredSubstance.name.toLowerCase() === querySubstance.toLowerCase() ? stayOnCurrentSubstance() : undefined}
+              onClick={() => filteredSubstance.name.toLowerCase() === querySubstance.toLowerCase() ? stayOnCurrentSubstance() : setLoadingSubstance(filteredSubstance)}
             >
               <div className="horizontal">
                 <div>
                   <p>{filteredSubstance.name}</p>
                   {!!filteredSubstance.aliasesSubtitle && <p>{filteredSubstance.aliasesSubtitle}</p>}
                 </div>
-                <FiChevronRight size={24} />
+                {
+                  loadingSubstance === filteredSubstance
+                    ? <PuffLoader color="#ffffff" size={28} />
+                    : <FiChevronRight size={24} />
+                }
               </div>
             </a>
           </Link>
