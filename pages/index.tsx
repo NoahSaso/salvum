@@ -261,7 +261,7 @@ const Substances: FC = () => {
                 {
                   loadingSubstance === filteredSubstance
                     ? <PuffLoader color="#ffffff" size={28} />
-                    : <FiChevronRight size={24} />
+                    : <FiChevronRight size={28} />
                 }
               </div>
             </a>
