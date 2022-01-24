@@ -32,6 +32,8 @@ const getInteraction = (substance: Substance | null, interactionIndex: number) =
     ? substance.interactions[interactionIndex]
     : null
 
+const getUrlForSubstance = (substance: Substance) => `/s/${encodeURIComponent(substance.name.toLowerCase())}`
+
 const Substances: FC = () => {
   const { query, isReady, push: routerPush } = useRouter()
   const querySubstance = decodeURIComponent(typeof query.substance === 'string' ? query.substance : '')
@@ -220,7 +222,7 @@ const Substances: FC = () => {
             (
               filteredSubstances[0].name.toLowerCase() === querySubstance.toLowerCase()
                 ? stayOnCurrentSubstance()
-                : routerPush(`/s/${filteredSubstances[0].name.toLowerCase()}`)
+                : routerPush(getUrlForSubstance(filteredSubstances[0]))
             )
           }
           onFocus={() => setListShowing(true)}
@@ -231,16 +233,18 @@ const Substances: FC = () => {
         className={cn(styles.list, { hidden: showingSubstance })}
         ref={listRef}
       >
-        {filteredSubstances.map(substance => (
+        {filteredSubstances.map(filteredSubstance => (
           <Link
-            key={substance.name}
-            href={`/s/${encodeURIComponent(substance.name.toLowerCase())}`}
+            key={filteredSubstance.name}
+            href={getUrlForSubstance(filteredSubstance)}
           >
-            <a>
+            <a
+              onClick={() => filteredSubstance.name.toLowerCase() === querySubstance.toLowerCase() ? stayOnCurrentSubstance() : undefined}
+            >
               <div className="horizontal">
                 <div>
-                  <p>{substance.name}</p>
-                  {!!substance.aliasesSubtitle && <p>{substance.aliasesSubtitle}</p>}
+                  <p>{filteredSubstance.name}</p>
+                  {!!filteredSubstance.aliasesSubtitle && <p>{filteredSubstance.aliasesSubtitle}</p>}
                 </div>
                 <FiChevronRight size={24} />
               </div>
