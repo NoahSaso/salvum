@@ -18,13 +18,13 @@
 
   * {
     line-height: 1.5rem;
+    margin: 0;
   }
 
   h1 {
     font-weight: normal;
     text-align: center;
     font-size: 2rem;
-    margin: 0;
   }
 
   h2 {
@@ -34,7 +34,6 @@
   }
 
   ul {
-    margin-top: 0;
     margin-bottom: 0.2rem;
 
     li {
@@ -43,5 +42,26 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.rowLink {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: $active;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+
+  margin-bottom: 0.2rem;
+  &:last-child {
+    margin-bottom: 0;
   }
 }

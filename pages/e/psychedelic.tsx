@@ -1,8 +1,9 @@
 import Head from "next/head"
 import Link from "next/link"
 import { FC } from "react"
+import { IoCallOutline, IoChatbubblesOutline } from "react-icons/io5"
 
-import { Container, Section } from "../../components/emergency"
+import { Container, RowLink, Section } from "../../components/emergency"
 import Header from "../../components/header"
 
 const Psychedelic: FC = () => (
@@ -56,6 +57,24 @@ const Psychedelic: FC = () => (
           <li>thinking of someone you love</li>
           <li>wrapping yourself in a blanket</li>
         </ul>
+      </Section>
+
+      <Section>
+        <h2>Peer Support Resources</h2>
+        <RowLink
+          label="Fireside Project's Calling Line"
+          href="tel:+16234737433"
+          icon={IoCallOutline}
+        />
+        <RowLink
+          label="Fireside Project's Texting Line"
+          href="sms:+16234737433"
+          icon={IoChatbubblesOutline}
+        />
+        <RowLink
+          label="TripSit's Internet Chat"
+          href="https://chat.tripsit.me"
+        />
       </Section>
 
       <Link href="/">
