@@ -135,6 +135,8 @@ const Substances: FC = () => {
   // helper when pressing enter when focused on search bar
   const selectFirstSubstance = () => {
     const first = filteredSubstances[0]
+    if (!first) return
+
     if (first.name.toLowerCase() === querySubstance.toLowerCase())
       stayOnCurrentSubstance()
     else {
