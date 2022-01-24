@@ -2,7 +2,7 @@ import cn from 'classnames'
 import Head from 'next/head'
 import { FC, useEffect, useState } from 'react'
 
-import Header from '../../components/apps/header'
+import Header from '../../components/header'
 import styles from './breathe.module.scss'
 
 enum BreatheState {
@@ -76,11 +76,11 @@ const Breathe: FC = () => {
   return (
     <>
       <Head>
-        <title>Salvum | App: Breathe</title>
+        <title>Salvum | Breathe</title>
         <meta name="description" content="Guided breathing exercise to help ground yourself." />
       </Head>
       <div className={styles.container}>
-        <Header title="Breathe" />
+        <Header title="Breathe" backHref="/apps" />
 
         <div className={styles.breatheContainer}>
           <div className={cn(styles.outer, { [styles.breatheIn]: breathingIn, [styles.breatheOut]: breathingOut })}>

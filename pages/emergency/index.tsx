@@ -30,7 +30,7 @@ const EmergencyPage: FC = () => (
     <div className={styles.pages}>
       {pages.map(({ title, href }) => (
         <Link key={title} href={href}>
-          <a className="opacity-feedback">{title}</a>
+          <a>{title}</a>
         </Link>
       ))}
     </div>

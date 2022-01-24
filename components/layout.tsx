@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { FC } from 'react'
 
 import Footer from './footer'
-import Header from './header'
+import SafeInsetCover from './safe_inset_cover'
 
 const TITLE = "Salvum"
 const DESCRIPTION = "Salvum consolidates harm reduction resources in one place in an effort to make safety in or around altered states of consciousness as easy as possible."
@@ -208,12 +208,10 @@ const Layout: FC = ({ children }) => (
     </Head>
 
     <div id="container">
-      <Header />
+      <SafeInsetCover />
       <main className="centered">{children}</main>
       <Footer />
     </div>
-
-    {/* <div id="safe-inset-bg" className="centered"></div> */}
   </>
 )
 
