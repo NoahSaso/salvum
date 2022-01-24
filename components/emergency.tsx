@@ -5,16 +5,17 @@ import { IoOpenOutline } from "react-icons/io5"
 
 import styles from "./emergency.module.scss"
 
-interface ChildrenProps {
+interface Props {
   children: ReactNode | ReactNodeArray
+  className?: string
 }
 
-export const Container: FC<ChildrenProps> = ({ children }) => (
-  <div className={styles.container}>{children}</div>
+export const Container: FC<Props> = ({ children, className }) => (
+  <div className={cn(styles.container, className)}>{children}</div>
 )
 
-export const Section: FC<ChildrenProps> = ({ children }) => (
-  <div className={cn("card", styles.section)}>{children}</div>
+export const Section: FC<Props> = ({ children, className }) => (
+  <div className={cn("card", styles.section, className)}>{children}</div>
 )
 
 interface RowLinkProps {

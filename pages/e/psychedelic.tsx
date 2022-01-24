@@ -3,8 +3,10 @@ import Link from "next/link"
 import { FC } from "react"
 import { IoCallOutline, IoChatbubblesOutline } from "react-icons/io5"
 
+import Breathe from "../../components/breathe"
 import { Container, RowLink, Section } from "../../components/emergency"
 import Header from "../../components/header"
+import styles from "./psychedelic.module.scss"
 
 const Psychedelic: FC = () => (
   <>
@@ -57,6 +59,11 @@ const Psychedelic: FC = () => (
           <li>thinking of someone you love</li>
           <li>wrapping yourself in a blanket</li>
         </ul>
+      </Section>
+
+      <Section className={styles.breatheSection}>
+        <h2>Breathing exercise</h2>
+        <Breathe smaller />
       </Section>
 
       <Section>
