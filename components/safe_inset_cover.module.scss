@@ -1,0 +1,13 @@
+@import "colors";
+
+// cover up safe inset on top
+.container {
+  height: 0;
+  background: $background;
+
+  z-index: 1;
+  flex: none;
+
+  --safe-area-inset-top: env(safe-area-inset-top);
+  height: var(--safe-area-inset-top);
+}

@@ -1,22 +1,22 @@
-import cn from 'classnames'
-import fuzzysort from 'fuzzysort'
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { usePlausible } from 'next-plausible'
-import { FC, useCallback, useEffect, useRef, useState } from 'react'
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import { IoOpenOutline } from 'react-icons/io5'
-import PuffLoader from 'react-spinners/PuffLoader'
-import { SWRConfig } from 'swr'
+import cn from "classnames"
+import fuzzysort from "fuzzysort"
+import Head from "next/head"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { usePlausible } from "next-plausible"
+import { FC, useCallback, useEffect, useRef, useState } from "react"
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
+import { IoOpenOutline } from "react-icons/io5"
+import PuffLoader from "react-spinners/PuffLoader"
+import { SWRConfig } from "swr"
 
-import ExternalLinkButton from '../components/external_link_button'
-import Interaction, { InteractionDisclaimer } from '../components/interaction'
-import ROA from '../components/roa'
-import { useSubstances } from '../helpers/swr'
-import { getSubstances } from '../services/data'
-import { NextPageWithFallback, PlausibleEvents, Substance } from '../types'
-import styles from './index.module.scss'
+import ExternalLinkButton from "../components/external_link_button"
+import Interaction, { InteractionDisclaimer } from "../components/interaction"
+import ROA from "../components/roa"
+import { useSubstances } from "../helpers/swr"
+import { getSubstances } from "../services/data"
+import { NextPageWithFallback, PlausibleEvents, Substance } from "../types"
+import styles from "./index.module.scss"
 
 let currentSubstanceFilter = 0
 
@@ -27,19 +27,25 @@ const getROA = (substance: Substance | null, roaIndex: number) =>
     ? substance.roas[roaIndex]
     : substance?.roas[0]
 
-const getInteraction = (substance: Substance | null, interactionIndex: number) =>
+const getInteraction = (
+  substance: Substance | null,
+  interactionIndex: number
+) =>
   interactionIndex > -1 &&
   !!substance?.interactions?.length &&
   interactionIndex < substance!.interactions!.length
     ? substance.interactions[interactionIndex]
     : null
 
-const getUrlForSubstance = (substance: Substance) => `/s/${encodeURIComponent(substance.name.toLowerCase())}`
+const getUrlForSubstance = (substance: Substance) =>
+  `/s/${encodeURIComponent(substance.name.toLowerCase())}`
 
 const Substances: FC = () => {
   const { query, isReady, push: routerPush } = useRouter()
-  const querySubstance = decodeURIComponent(typeof query.substance === 'string' ? query.substance : '')
-  const [loadedQuerySubstance, setLoadedQuerySubstance] = useState('')
+  const querySubstance = decodeURIComponent(
+    typeof query.substance === "string" ? query.substance : ""
+  )
+  const [loadedQuerySubstance, setLoadedQuerySubstance] = useState("")
 
   const { substances } = useSubstances()
   const plausible = usePlausible<PlausibleEvents>()
@@ -47,11 +53,13 @@ const Substances: FC = () => {
   const searchRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
 
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("")
   const [filteredSubstances, setFilteredSubstances] = useState(substances)
   const [substance, setSelectedSubstance] = useState(null as Substance | null)
   const [listShowing, setListShowing] = useState(true)
-  const [loadingSubstance, setLoadingSubstance] = useState(null as Substance | null)
+  const [loadingSubstance, setLoadingSubstance] = useState(
+    null as Substance | null
+  )
 
   // show first ROA by default
   const [selectedROA, setSelectedROA] = useState(0)
@@ -59,46 +67,43 @@ const Substances: FC = () => {
 
   const [selectedInteraction, setSelectedInteraction] = useState(-1)
   const resetInteraction = () => setSelectedInteraction(-1)
-  const interactionsHeader = useRef<HTMLHeadingElement>(null )
+  const interactionsHeader = useRef<HTMLHeadingElement>(null)
 
   // scroll to top of interactions if selected or deselected
   useEffect(() => {
-    interactionsHeader.current?.scrollIntoView({ behavior: 'smooth' })
+    interactionsHeader.current?.scrollIntoView({ behavior: "smooth" })
   }, [selectedInteraction])
 
-  const scrollToTop = () => listRef.current?.scroll({ top: 0, behavior: 'smooth' })
+  const scrollToTop = () =>
+    listRef.current?.scroll({ top: 0, behavior: "smooth" })
 
   // filter data for search
   useEffect(() => {
     let currentSearch = ++currentSubstanceFilter
-    if (!search?.trim())
-      setFilteredSubstances(substances)
+    if (!search?.trim()) setFilteredSubstances(substances)
     else
       fuzzysort
         .goAsync(search, substances, {
-          keys: ['name', 'aliasesStr'],
+          keys: ["name", "aliasesStr"],
           allowTypo: true,
         })
-        .then(async result => {
+        .then(async (result) => {
           // if another filter is running, don't update
-          if (currentSearch !== currentSubstanceFilter)
-            return
+          if (currentSearch !== currentSubstanceFilter) return
 
           // calculate which aliases to display
           const augmentedResult = result.map(({ obj }) => ({
             ...obj,
-            aliasesSubtitle:
-              obj.aliases?.length
-                ? fuzzysort
+            aliasesSubtitle: obj.aliases?.length
+              ? fuzzysort
                   .go(search, obj.aliases, { allowTypo: true })
-                  .map(r => r.target)
-                  .join(', ')
-                : undefined
+                  .map((r) => r.target)
+                  .join(", ")
+              : undefined,
           }))
 
           // check again bc why not
-          if (currentSearch !== currentSubstanceFilter)
-            return
+          if (currentSearch !== currentSubstanceFilter) return
 
           setFilteredSubstances(augmentedResult)
         })
@@ -150,81 +155,95 @@ const Substances: FC = () => {
 
   const selectROA = (roa: number) => {
     // don't update if no change
-    if (selectedROA === roa)
-      return
+    if (selectedROA === roa) return
 
     setSelectedROA(roa)
 
     const { name } = getROA(substance, roa) || {}
     if (substance && name)
-      plausible('substanceROA', {
+      plausible("substanceROA", {
         props: {
           substance: substance.name,
           roa: name,
-          combined: `${substance.name} > ${name}`
-        }
+          combined: `${substance.name} > ${name}`,
+        },
       })
   }
 
   const selectInteraction = (interaction: number) => {
     // don't update if no change
-    if (selectedInteraction === interaction)
-      return
+    if (selectedInteraction === interaction) return
 
     setSelectedInteraction(interaction)
 
     const { name } = getInteraction(substance, interaction) || {}
     if (substance && name)
-      plausible('substanceInteraction', {
+      plausible("substanceInteraction", {
         props: {
           substance: substance.name,
           otherSubstance: name,
-          combined: `${substance.name} + ${name}`
-        }
+          combined: `${substance.name} + ${name}`,
+        },
       })
   }
 
-  const setSubstanceAndQuery = useCallback((newSubstance: Substance | null, query: string) => {
-    setLoadedQuerySubstance(query)
-    setSelectedSubstance(newSubstance)
-    setListShowing(newSubstance === null)
+  const setSubstanceAndQuery = useCallback(
+    (newSubstance: Substance | null, query: string) => {
+      setLoadedQuerySubstance(query)
+      setSelectedSubstance(newSubstance)
+      setListShowing(newSubstance === null)
 
-    if (newSubstance) {
-      plausible('substance', {
-        props: { name: newSubstance.name }
-      })
-    } else {
-      setSearch('')
-    }
-  }, [plausible])
+      if (newSubstance) {
+        plausible("substance", {
+          props: { name: newSubstance.name },
+        })
+      } else {
+        setSearch("")
+      }
+    },
+    [plausible]
+  )
 
   // Load substance from query if available
   useEffect(() => {
-    if (typeof querySubstance !== 'string' || querySubstance === loadedQuerySubstance) return
+    if (
+      typeof querySubstance !== "string" ||
+      querySubstance === loadedQuerySubstance
+    )
+      return
 
-    const substanceFromQuery = substances.find(s => s.name.toLowerCase() === querySubstance.toLowerCase())
+    const substanceFromQuery = substances.find(
+      (s) => s.name.toLowerCase() === querySubstance.toLowerCase()
+    )
     if (substanceFromQuery) {
       setSubstanceAndQuery(substanceFromQuery, querySubstance)
     } else {
-      setSubstanceAndQuery(null, '')
+      setSubstanceAndQuery(null, "")
     }
     setLoadingSubstance(null)
-  }, [isReady, substances, querySubstance, setSubstanceAndQuery, loadedQuerySubstance])
+  }, [
+    isReady,
+    substances,
+    querySubstance,
+    setSubstanceAndQuery,
+    loadedQuerySubstance,
+  ])
 
   if (!isReady) return <div />
 
   return (
     <>
       <Head>
-        <title>Salvum{showingSubstance ? ` | ${substance.name}` : ''}</title>
-        <meta name="description" content="Guided breathing exercise to help ground yourself." />
+        <title>Salvum{showingSubstance ? ` | ${substance.name}` : ""}</title>
+        <meta
+          name="description"
+          content="Guided breathing exercise to help ground yourself."
+        />
       </Head>
 
       <div className={styles.header}>
         {!listShowing && (
-          <Link
-            href="/"
-          >
+          <Link href="/">
             <a>
               <FiChevronLeft size={24} />
             </a>
@@ -240,8 +259,7 @@ const Substances: FC = () => {
           onChange={({ target: { value } }) => setSearch(value)}
           // on enter, select first substance
           onKeyDown={({ key, keyCode }) =>
-            (key === 'Enter' || keyCode === 13) &&
-            selectFirstSubstance()
+            (key === "Enter" || keyCode === 13) && selectFirstSubstance()
           }
           onFocus={() => setListShowing(true)}
         />
@@ -251,24 +269,31 @@ const Substances: FC = () => {
         className={cn(styles.list, { hidden: showingSubstance })}
         ref={listRef}
       >
-        {filteredSubstances.map(filteredSubstance => (
+        {filteredSubstances.map((filteredSubstance) => (
           <Link
             key={filteredSubstance.name}
             href={getUrlForSubstance(filteredSubstance)}
           >
             <a
-              onClick={() => filteredSubstance.name.toLowerCase() === querySubstance.toLowerCase() ? stayOnCurrentSubstance() : setLoadingSubstance(filteredSubstance)}
+              onClick={() =>
+                filteredSubstance.name.toLowerCase() ===
+                querySubstance.toLowerCase()
+                  ? stayOnCurrentSubstance()
+                  : setLoadingSubstance(filteredSubstance)
+              }
             >
               <div className="horizontal">
                 <div>
                   <p>{filteredSubstance.name}</p>
-                  {!!filteredSubstance.aliasesSubtitle && <p>{filteredSubstance.aliasesSubtitle}</p>}
+                  {!!filteredSubstance.aliasesSubtitle && (
+                    <p>{filteredSubstance.aliasesSubtitle}</p>
+                  )}
                 </div>
-                {
-                  loadingSubstance === filteredSubstance
-                    ? <PuffLoader color="#ffffff" size={28} />
-                    : <FiChevronRight size={28} />
-                }
+                {loadingSubstance === filteredSubstance ? (
+                  <PuffLoader color="#ffffff" size={28} />
+                ) : (
+                  <FiChevronRight size={28} />
+                )}
               </div>
             </a>
           </Link>
@@ -286,9 +311,12 @@ const Substances: FC = () => {
             <IoOpenOutline size={28} />
           </a>
 
-          {!!substance.classes?.chemical && Array.isArray(substance.classes.chemical) && (
-            <p className={styles.classes}>{substance.classes.chemical.join(' • ')}</p>
-          )}
+          {!!substance.classes?.chemical &&
+            Array.isArray(substance.classes.chemical) && (
+              <p className={styles.classes}>
+                {substance.classes.chemical.join(" • ")}
+              </p>
+            )}
 
           {!!substance.summary && (
             <p className={styles.summary}>{substance.summary}</p>
@@ -304,7 +332,9 @@ const Substances: FC = () => {
 
           {!!substance.roas?.length && (
             <>
-              <h3>Route{substance.roas.length > 1 ? 's' : ''} of Administration</h3>
+              <h3>
+                Route{substance.roas.length > 1 ? "s" : ""} of Administration
+              </h3>
               <div className={styles.roas}>
                 {substance.roas.map(({ name }, idx) => (
                   <button
@@ -320,9 +350,7 @@ const Substances: FC = () => {
                   </button>
                 ))}
               </div>
-              {!!roa && (
-                <ROA roa={roa} />
-              )}
+              {!!roa && <ROA roa={roa} />}
             </>
           )}
 
@@ -344,31 +372,34 @@ const Substances: FC = () => {
             </>
           )}
 
-          {!!substance.tolerance && (!!substance.tolerance.full || !!substance.tolerance.half || !!substance.tolerance.zero) && (
-            <>
-              <h3>Tolerance</h3>
-              <div className={styles.group}>
-                {!!substance.tolerance.full && (
-                  <div className="horizontal rowGroup">
-                    <p>100%</p>
-                    <p>{substance.tolerance.full}</p>
-                  </div>
-                )}
-                {!!substance.tolerance.half && (
-                  <div className="horizontal rowGroup">
-                    <p>50%</p>
-                    <p>{substance.tolerance.half}</p>
-                  </div>
-                )}
-                {!!substance.tolerance.zero && (
-                  <div className="horizontal rowGroup">
-                    <p>0%</p>
-                    <p>{substance.tolerance.zero}</p>
-                  </div>
-                )}
-              </div>
-            </>
-          )}
+          {!!substance.tolerance &&
+            (!!substance.tolerance.full ||
+              !!substance.tolerance.half ||
+              !!substance.tolerance.zero) && (
+              <>
+                <h3>Tolerance</h3>
+                <div className={styles.group}>
+                  {!!substance.tolerance.full && (
+                    <div className="horizontal rowGroup">
+                      <p>100%</p>
+                      <p>{substance.tolerance.full}</p>
+                    </div>
+                  )}
+                  {!!substance.tolerance.half && (
+                    <div className="horizontal rowGroup">
+                      <p>50%</p>
+                      <p>{substance.tolerance.half}</p>
+                    </div>
+                  )}
+                  {!!substance.tolerance.zero && (
+                    <div className="horizontal rowGroup">
+                      <p>0%</p>
+                      <p>{substance.tolerance.zero}</p>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
 
           {!!substance.crossTolerances?.length && (
             <>
@@ -391,34 +422,28 @@ const Substances: FC = () => {
           {!!substance.interactions?.length && (
             <>
               <h3 ref={interactionsHeader}>Interactions</h3>
-              {interaction
-                ? (
-                  <div className={styles.interaction}>
-                    <div
-                      className="horizontal clickable"
-                      onClick={resetInteraction}
-                    >
-                      <FiChevronLeft size={30} />
-                      <h2>{interaction.name}</h2>
-                    </div>
+              {interaction ? (
+                <div className={styles.interaction}>
+                  <div
+                    className="horizontal clickable"
+                    onClick={resetInteraction}
+                  >
+                    <FiChevronLeft size={30} />
+                    <h2>{interaction.name}</h2>
+                  </div>
 
-                    <Interaction interaction={interaction} />
-                    <InteractionDisclaimer />
-                  </div>
-                )
-                : (
-                  <div className={styles.interactions}>
-                    {substance.interactions.map((interaction, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => selectInteraction(idx)}
-                      >
-                        {interaction.name}
-                      </button>
-                    ))}
-                  </div>
-                )
-              }
+                  <Interaction interaction={interaction} />
+                  <InteractionDisclaimer />
+                </div>
+              ) : (
+                <div className={styles.interactions}>
+                  {substance.interactions.map((interaction, idx) => (
+                    <button key={idx} onClick={() => selectInteraction(idx)}>
+                      {interaction.name}
+                    </button>
+                  ))}
+                </div>
+              )}
             </>
           )}
 
@@ -435,9 +460,10 @@ const Substances: FC = () => {
           </div>
 
           <p className="disclaimer">
-            Disclaimer: This information is NOT medical advice. Substances consumed outside of a medical setting may be
-            impure or affect you in unexpected ways based on your unique physiology. Please do your own research before
-            ingesting anything and be safe &lt;3.
+            Disclaimer: This information is NOT medical advice. Substances
+            consumed outside of a medical setting may be impure or affect you in
+            unexpected ways based on your unique physiology. Please do your own
+            research before ingesting anything and be safe &lt;3.
           </p>
         </div>
       )}
@@ -456,7 +482,7 @@ export default SubstancesPage
 export const getStaticProps = async () => ({
   props: {
     fallback: {
-      '/api/substances': getSubstances()
-    }
-  }
+      "/api/substances": getSubstances(),
+    },
+  },
 })

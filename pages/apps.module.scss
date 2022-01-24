@@ -1,26 +1,16 @@
 @import "colors";
 
 .container {
-  margin: 2rem 2% 0 2%;
+  padding: 2%;
   overflow-y: auto;
 
-  padding-bottom: 0.4rem;
-
-  h1 {
-    margin-bottom: 4px;
-  }
-
-  .card {
+  .appCard {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    padding: 20px;
     margin-top: 6px;
-
-    background: $hover;
-    border-radius: 6px;
 
     div {
       flex: 1;

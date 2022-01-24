@@ -1,10 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { AnchorHTMLAttributes, FC } from 'react'
-import { FiChevronRight } from 'react-icons/fi'
-import { IoOpenOutline } from 'react-icons/io5'
+import cn from "classnames"
+import Head from "next/head"
+import Link from "next/link"
+import { FC } from "react"
+import { FiChevronRight } from "react-icons/fi"
+import { IoOpenOutline } from "react-icons/io5"
 
-import styles from './index.module.scss'
+import Header from "../components/header"
+import styles from "./apps.module.scss"
 
 interface AppProps {
   title: string
@@ -12,17 +14,19 @@ interface AppProps {
   url: string
 }
 const App: FC<AppProps> = ({ title, subtitle, url }) => {
-  const isExternal = !url.startsWith('/apps')
+  const isExternal = !url.startsWith("/")
 
-  const Icon = isExternal
-    ? <IoOpenOutline size={28} />
-    : <FiChevronRight size={32} />
+  const Icon = isExternal ? (
+    <IoOpenOutline size={28} />
+  ) : (
+    <FiChevronRight size={32} />
+  )
   const aProps = isExternal
-    ? { href: url, target: '_blank', rel: 'noopener noreferrer' }
+    ? { href: url, target: "_blank", rel: "noopener noreferrer" }
     : {}
 
   const content = (
-    <a className={styles.card} {...aProps}>
+    <a className={cn("card", styles.appCard)} {...aProps}>
       <div>
         <h2>{title}</h2>
         {!!subtitle && <p>{subtitle}</p>}
@@ -31,13 +35,7 @@ const App: FC<AppProps> = ({ title, subtitle, url }) => {
     </a>
   )
 
-  return isExternal
-    ? content
-    : (
-      <Link href={url}>
-        {content}
-      </Link>
-    )
+  return isExternal ? content : <Link href={url}>{content}</Link>
 }
 
 const Apps: FC = () => {
@@ -45,15 +43,19 @@ const Apps: FC = () => {
     <>
       <Head>
         <title>Salvum | Apps</title>
-        <meta name="description" content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down." />
+        <meta
+          name="description"
+          content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down."
+        />
       </Head>
-      <div className={styles.container}>
-        <h1>Apps</h1>
 
+      <Header title="Apps" centered />
+
+      <div className={styles.container}>
         <App
           title="Breathe"
           subtitle="a guided square breath to ground yourself"
-          url="/apps/breathe"
+          url="/a/breathe"
         />
 
         <App

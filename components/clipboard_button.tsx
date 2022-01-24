@@ -1,14 +1,14 @@
-import cn from 'classnames'
-import { FC, HTMLAttributes, useRef, useState } from 'react'
-import { IoCheckmark, IoCopyOutline } from 'react-icons/io5'
+import cn from "classnames"
+import { FC, HTMLAttributes, useRef, useState } from "react"
+import { IoCheckmark, IoCopyOutline } from "react-icons/io5"
 
-import styles from './clipboard_button.module.scss'
+import styles from "./clipboard_button.module.scss"
 
 interface Props {
   title?: string
   Icon?: JSX.Element
   data: string
-  containerStyle?: HTMLAttributes<HTMLDivElement>['style'],
+  containerStyle?: HTMLAttributes<HTMLDivElement>["style"]
   callback?: () => void
 }
 
@@ -17,14 +17,14 @@ const ClipboardButton: FC<Props> = ({
   Icon,
   data,
   containerStyle,
-  callback
+  callback,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [copied, setCopied] = useState(false)
 
   const copy = () => {
     inputRef.current?.select()
-    document.execCommand('copy')
+    document.execCommand("copy")
 
     setCopied(true)
     callback?.()
@@ -36,12 +36,8 @@ const ClipboardButton: FC<Props> = ({
     <div className={cn(styles.container, containerStyle)}>
       {!!title && <p>{title}</p>}
 
-      <div className={cn('clickable', styles.row)} onClick={copy}>
-        {!!Icon && (
-          <div className={styles.iconContainer}>
-            {Icon}
-          </div>
-        )}
+      <div className={cn("clickable", styles.row)} onClick={copy}>
+        {!!Icon && <div className={styles.iconContainer}>{Icon}</div>}
 
         <div className={styles.actionContainer}>
           <input

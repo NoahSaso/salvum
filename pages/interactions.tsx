@@ -1,26 +1,38 @@
-import cn from 'classnames'
-import Head from 'next/head'
-import { usePlausible } from 'next-plausible'
-import { FC, useEffect, useMemo, useRef, useState } from 'react'
-import { SWRConfig } from 'swr'
+import cn from "classnames"
+import Head from "next/head"
+import { usePlausible } from "next-plausible"
+import { FC, useEffect, useMemo, useRef, useState } from "react"
+import { SWRConfig } from "swr"
 
-import Interaction, { InteractionDisclaimer } from '../components/interaction'
-import { useInteractions } from '../helpers/swr'
-import { getInteractions } from '../services/data'
-import { InteractionSubstance, NextPageWithFallback, PlausibleEvents } from '../types'
-import styles from './interactions.module.scss'
+import Interaction, { InteractionDisclaimer } from "../components/interaction"
+import { useInteractions } from "../helpers/swr"
+import { getInteractions } from "../services/data"
+import {
+  InteractionSubstance,
+  NextPageWithFallback,
+  PlausibleEvents,
+} from "../types"
+import styles from "./interactions.module.scss"
 
 const Interactions: FC = () => {
   const { interactions } = useInteractions()
   const plausible = usePlausible<PlausibleEvents>()
 
-  const [substance1, setSubstance1] = useState(null as InteractionSubstance | null)
-  const [substance2, setSubstance2] = useState(null as InteractionSubstance | null)
+  const [substance1, setSubstance1] = useState(
+    null as InteractionSubstance | null
+  )
+  const [substance2, setSubstance2] = useState(
+    null as InteractionSubstance | null
+  )
 
   // scroll to top of interaction if selected
-  const interactionHeader = useRef<HTMLHeadingElement>(null )
+  const interactionHeader = useRef<HTMLHeadingElement>(null)
   useEffect(() => {
-    interactionHeader.current?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+    interactionHeader.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    })
   }, [substance1, substance2])
 
   const tappedSubstance = (substance: InteractionSubstance) => {
@@ -50,17 +62,17 @@ const Interactions: FC = () => {
 
     // plausible event if viewing new interaction
     if (newSubstance1 && newSubstance2)
-      plausible('interaction', {
+      plausible("interaction", {
         props: {
           substance: newSubstance1,
           otherSubstance: newSubstance2,
-          combined: `${newSubstance1} + ${newSubstance2}`
-        }
+          combined: `${newSubstance1} + ${newSubstance2}`,
+        },
       })
   }
 
   const substanceLabels = useMemo(
-    () => (Object.keys(interactions).sort() as unknown) as InteractionSubstance[],
+    () => Object.keys(interactions).sort() as unknown as InteractionSubstance[],
     [interactions]
   )
   const interaction = useMemo(
@@ -71,12 +83,13 @@ const Interactions: FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.interactions}>
-        {substanceLabels.map(substance => (
+        {substanceLabels.map((substance) => (
           <button
             key={substance}
             onClick={() => tappedSubstance(substance)}
             className={cn({
-              [styles.selected]: substance === substance1 || substance === substance2
+              [styles.selected]:
+                substance === substance1 || substance === substance2,
             })}
           >
             {substance}
@@ -85,18 +98,15 @@ const Interactions: FC = () => {
       </div>
 
       <div className={styles.content}>
-        {interaction
-          ? (
-            <div ref={interactionHeader} className={styles.interaction}>
-              <Interaction interaction={interaction} />
-            </div>
-          )
-          : (
-            <p className={styles.instruction}>
-              Choose two substances above to view their interaction profile.
-            </p>
-          )
-        }
+        {interaction ? (
+          <div ref={interactionHeader} className={styles.interaction}>
+            <Interaction interaction={interaction} />
+          </div>
+        ) : (
+          <p className={styles.instruction}>
+            Choose two substances above to view their interaction profile.
+          </p>
+        )}
 
         <InteractionDisclaimer />
       </div>
@@ -108,7 +118,10 @@ const InteractionsPage: NextPageWithFallback = ({ fallback }) => (
   <>
     <Head>
       <title>Salvum | Interactions</title>
-      <meta name="description" content="Quick substance interaction/combination lookup for some commonly used drugs and drug classes." />
+      <meta
+        name="description"
+        content="Quick substance interaction/combination lookup for some commonly used drugs and drug classes."
+      />
     </Head>
     <SWRConfig value={{ fallback }}>
       <Interactions />
@@ -121,7 +134,7 @@ export default InteractionsPage
 export const getStaticProps = async () => ({
   props: {
     fallback: {
-      '/api/interactions': getInteractions()
-    }
-  }
+      "/api/interactions": getInteractions(),
+    },
+  },
 })

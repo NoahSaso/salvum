@@ -1,0 +1,100 @@
+@import "colors";
+
+.breatheContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1;
+
+  .outer {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+
+    background: rgb(97, 190, 162);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+
+    transform: scale(0.65);
+
+    .middle {
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+
+      background: rgb(156, 217, 198);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .inner {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+
+        background: rgb(182, 227, 213);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          font-size: 1.5rem;
+          text-align: center;
+          color: $background;
+
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          animation-duration: 4s;
+        }
+      }
+    }
+
+    &.breatheIn {
+      animation-name: breathe-in;
+    }
+
+    &.breatheOut {
+      animation-name: breathe-out;
+    }
+  }
+
+  .instructions {
+    font-size: 1.5rem;
+    text-align: center;
+
+    margin-top: 4rem;
+
+    &.smaller {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@keyframes breathe-in {
+  from {
+    transform: scale(0.65);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes breathe-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.65);
+  }
+}

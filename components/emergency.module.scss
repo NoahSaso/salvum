@@ -1,0 +1,67 @@
+@import "colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  padding: 2%;
+  overflow-y: auto;
+}
+
+.section {
+  margin-top: 0.4rem;
+
+  background-color: $hover;
+  border-radius: 0.3rem;
+
+  * {
+    line-height: 1.5rem;
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-weight: normal;
+    color: $tertiary;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin-bottom: 0.2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.rowLink {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: $active;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+
+  margin-bottom: 0.2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
