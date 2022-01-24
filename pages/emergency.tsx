@@ -1,24 +1,24 @@
 import Link from "next/link"
 import React, { FC } from "react"
 
-import styles from "./index.module.scss"
+import styles from "./emergency.module.scss"
 
 const pages = [
   {
     title: "Psychedelic",
-    href: "/emergency/psychedelic",
+    href: "/e/psychedelic",
   },
   {
     title: "Too Much\nWeed",
-    href: "/emergency/weed",
+    href: "/e/weed",
   },
   {
     title: "Opioid\nOverdose",
-    href: "/emergency/opioid",
+    href: "/e/opioid",
   },
   {
     title: "Alcohol\nPoisoning",
-    href: "/emergency/alcohol",
+    href: "/e/alcohol",
   },
 ]
 

@@ -1,3 +1,4 @@
+import cn from "classnames"
 import Head from "next/head"
 import Link from "next/link"
 import { FC } from "react"
@@ -25,7 +26,7 @@ const App: FC<AppProps> = ({ title, subtitle, url }) => {
     : {}
 
   const content = (
-    <a className={styles.card} {...aProps}>
+    <a className={cn("card", styles.appCard)} {...aProps}>
       <div>
         <h2>{title}</h2>
         {!!subtitle && <p>{subtitle}</p>}
@@ -47,9 +48,10 @@ const Apps: FC = () => {
           content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down."
         />
       </Head>
-      <div className={styles.container}>
-        <Header title="Apps" />
 
+      <Header title="Apps" centered />
+
+      <div className={styles.container}>
         <App
           title="Breathe"
           subtitle="a guided square breath to ground yourself"
