@@ -8,18 +8,18 @@ const pages = [
     title: "Psychedelic",
     href: "/e/psychedelic",
   },
-  {
-    title: "Too Much\nWeed",
-    href: "/e/weed",
-  },
-  {
-    title: "Opioid\nOverdose",
-    href: "/e/opioid",
-  },
-  {
-    title: "Alcohol\nPoisoning",
-    href: "/e/alcohol",
-  },
+  // {
+  //   title: "Too Much\nWeed",
+  //   href: "/e/weed",
+  // },
+  // {
+  //   title: "Opioid\nOverdose",
+  //   href: "/e/opioid",
+  // },
+  // {
+  //   title: "Alcohol\nPoisoning",
+  //   href: "/e/alcohol",
+  // },
 ]
 
 const EmergencyPage: FC = () => (

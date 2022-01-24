@@ -5,8 +5,8 @@ import { FC } from "react"
 import { FiChevronRight } from "react-icons/fi"
 import { IoOpenOutline } from "react-icons/io5"
 
-import Header from "../../components/header"
-import styles from "./index.module.scss"
+import Header from "../components/header"
+import styles from "./apps.module.scss"
 
 interface AppProps {
   title: string
@@ -14,7 +14,7 @@ interface AppProps {
   url: string
 }
 const App: FC<AppProps> = ({ title, subtitle, url }) => {
-  const isExternal = !url.startsWith("/apps")
+  const isExternal = !url.startsWith("/")
 
   const Icon = isExternal ? (
     <IoOpenOutline size={28} />
@@ -55,7 +55,7 @@ const Apps: FC = () => {
         <App
           title="Breathe"
           subtitle="a guided square breath to ground yourself"
-          url="/apps/breathe"
+          url="/a/breathe"
         />
 
         <App
