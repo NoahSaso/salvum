@@ -1,9 +1,9 @@
-import '../assets/global.scss'
+import "../assets/global.scss"
 
-import type { AppProps } from 'next/app'
-import PlausibleProvider from 'next-plausible'
+import type { AppProps } from "next/app"
+import PlausibleProvider from "next-plausible"
 
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

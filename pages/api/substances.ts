@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from "next"
 
-import { getSubstances } from '../../services/data'
-import { Substance } from '../../types'
+import { getSubstances } from "../../services/data"
+import { Substance } from "../../types"
 
 const handler = async (
   req: NextApiRequest,

@@ -1,5 +1,5 @@
-import interactions from '../data/interactions.json'
-import substances from '../data/substances.json'
+import interactions from "../data/interactions.json"
+import substances from "../data/substances.json"
 
 export const getInteractions = () => interactions
 

@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import { FC } from 'react'
+import Head from "next/head"
+import { FC } from "react"
 
-import styles from './offline.module.scss'
+import styles from "./offline.module.scss"
 
 const Offline: FC = () => (
   <>

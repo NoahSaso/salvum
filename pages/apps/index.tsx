@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { AnchorHTMLAttributes, FC } from 'react'
-import { FiChevronRight } from 'react-icons/fi'
-import { IoOpenOutline } from 'react-icons/io5'
+import Head from "next/head"
+import Link from "next/link"
+import { FC } from "react"
+import { FiChevronRight } from "react-icons/fi"
+import { IoOpenOutline } from "react-icons/io5"
 
-import Header from '../../components/header'
-import styles from './index.module.scss'
+import Header from "../../components/header"
+import styles from "./index.module.scss"
 
 interface AppProps {
   title: string
@@ -13,13 +13,15 @@ interface AppProps {
   url: string
 }
 const App: FC<AppProps> = ({ title, subtitle, url }) => {
-  const isExternal = !url.startsWith('/apps')
+  const isExternal = !url.startsWith("/apps")
 
-  const Icon = isExternal
-    ? <IoOpenOutline size={28} />
-    : <FiChevronRight size={32} />
+  const Icon = isExternal ? (
+    <IoOpenOutline size={28} />
+  ) : (
+    <FiChevronRight size={32} />
+  )
   const aProps = isExternal
-    ? { href: url, target: '_blank', rel: 'noopener noreferrer' }
+    ? { href: url, target: "_blank", rel: "noopener noreferrer" }
     : {}
 
   const content = (
@@ -32,13 +34,7 @@ const App: FC<AppProps> = ({ title, subtitle, url }) => {
     </a>
   )
 
-  return isExternal
-    ? content
-    : (
-      <Link href={url}>
-        {content}
-      </Link>
-    )
+  return isExternal ? content : <Link href={url}>{content}</Link>
 }
 
 const Apps: FC = () => {
@@ -46,7 +42,10 @@ const Apps: FC = () => {
     <>
       <Head>
         <title>Salvum | Apps</title>
-        <meta name="description" content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down." />
+        <meta
+          name="description"
+          content="Interactive modules that serve various purposes, such as a simple guided breathing exercise to calm you down."
+        />
       </Head>
       <div className={styles.container}>
         <Header title="Apps" />
