@@ -15,7 +15,7 @@
     outline: none;
   }
 
-  button {
+  a {
     padding: 2px;
     margin-right: 2px;
 
@@ -44,11 +44,13 @@
 
   overflow-y: auto;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  & > a > div {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
     padding: 10px 12px 10px 20px;
 

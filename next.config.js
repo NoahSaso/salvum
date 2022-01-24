@@ -18,6 +18,14 @@ module.exports =
       reactStrictMode: true,
       sassOptions: {
         includePaths: [path.join(__dirname, 'assets')]
+      },
+      async rewrites() {
+        return [
+          {
+            source: '/s/:substance',
+            destination: '/'
+          }
+        ]
       }
     })
   })

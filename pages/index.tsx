@@ -1,8 +1,10 @@
 import cn from 'classnames'
 import fuzzysort from 'fuzzysort'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { usePlausible } from 'next-plausible'
-import { FC, useEffect, useRef, useState } from 'react'
-import { FiChevronLeft } from 'react-icons/fi'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { IoOpenOutline } from 'react-icons/io5'
 import { SWRConfig } from 'swr'
 
@@ -31,6 +33,10 @@ const getInteraction = (substance: Substance | null, interactionIndex: number) =
     : null
 
 const Substances: FC = () => {
+  const { query, isReady, push: routerPush } = useRouter()
+  const querySubstance = decodeURIComponent(typeof query.substance === 'string' ? query.substance : '')
+  const [loadedQuerySubstance, setLoadedQuerySubstance] = useState('')
+
   const { substances } = useSubstances()
   const plausible = usePlausible<PlausibleEvents>()
 
@@ -116,21 +122,13 @@ const Substances: FC = () => {
 
   const showingSubstance = !!substance && !listShowing
 
-  // plausible state helpers
-
-  const selectSubstance = (newSubstance: Substance) => {
+  // helper when pressing enter on already selected substance
+  const stayOnCurrentSubstance = () => {
     setListShowing(false)
-
-    // don't update if no change
-    if (substance === newSubstance)
-      return
-
-    setSelectedSubstance(newSubstance)
-
-    plausible('substance', {
-      props: { name: newSubstance.name }
-    })
+    searchRef.current?.blur()
   }
+
+  // plausible state helpers
 
   const selectROA = (roa: number) => {
     // don't update if no change
@@ -168,15 +166,45 @@ const Substances: FC = () => {
       })
   }
 
+  const setSubstanceAndQuery = useCallback((newSubstance: Substance | null, query: string) => {
+    setLoadedQuerySubstance(query)
+    setSelectedSubstance(newSubstance)
+    setListShowing(newSubstance === null)
+
+    if (newSubstance) {
+      plausible('substance', {
+        props: { name: newSubstance.name }
+      })
+    } else {
+      setSearch('')
+    }
+  }, [plausible])
+
+  // Load substance from query if available
+  useEffect(() => {
+    if (typeof querySubstance !== 'string' || querySubstance === loadedQuerySubstance) return
+
+    const substanceFromQuery = substances.find(s => s.name.toLowerCase() === querySubstance.toLowerCase())
+    if (substanceFromQuery) {
+      setSubstanceAndQuery(substanceFromQuery, querySubstance)
+    } else {
+      setSubstanceAndQuery(null, '')
+    }
+  }, [isReady, substances, querySubstance, setSubstanceAndQuery, loadedQuerySubstance])
+
+  if (!isReady) return <div />
+
   return (
     <>
       <div className={styles.header}>
         {!listShowing && (
-          <button
-            onClick={() => setListShowing(true)}
+          <Link
+            href="/"
           >
-            <FiChevronLeft size={24} />
-          </button>
+            <a>
+              <FiChevronLeft size={24} />
+            </a>
+          </Link>
         )}
 
         <input
@@ -189,7 +217,11 @@ const Substances: FC = () => {
           // on enter, select first substance
           onKeyDown={({ key, keyCode }) =>
             (key === 'Enter' || keyCode === 13) &&
-            selectSubstance(filteredSubstances[0])
+            (
+              filteredSubstances[0].name.toLowerCase() === querySubstance.toLowerCase()
+                ? stayOnCurrentSubstance()
+                : routerPush(`/s/${filteredSubstances[0].name.toLowerCase()}`)
+            )
           }
           onFocus={() => setListShowing(true)}
         />
@@ -200,14 +232,20 @@ const Substances: FC = () => {
         ref={listRef}
       >
         {filteredSubstances.map(substance => (
-          <div
+          <Link
             key={substance.name}
-            // onMouseDown instead of onClick so it runs before the search bar's onBlur
-            onMouseDown={() => selectSubstance(substance)}
+            href={`/s/${encodeURIComponent(substance.name.toLowerCase())}`}
           >
-            <p>{substance.name}</p>
-            {!!substance.aliasesSubtitle && <p>{substance.aliasesSubtitle}</p>}
-          </div>
+            <a>
+              <div className="horizontal">
+                <div>
+                  <p>{substance.name}</p>
+                  {!!substance.aliasesSubtitle && <p>{substance.aliasesSubtitle}</p>}
+                </div>
+                <FiChevronRight size={24} />
+              </div>
+            </a>
+          </Link>
         ))}
       </div>
       {showingSubstance && (
