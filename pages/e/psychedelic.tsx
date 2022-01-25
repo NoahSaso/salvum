@@ -1,10 +1,13 @@
 import Head from "next/head"
 import Link from "next/link"
 import { FC } from "react"
-import { IoCallOutline, IoChatbubblesOutline } from "react-icons/io5"
 
 import Breathe from "../../components/breathe"
-import { Container, RowLink, Section } from "../../components/emergency"
+import {
+  Container,
+  PeerSupportResourcesSection,
+  Section,
+} from "../../components/emergency"
 import Header from "../../components/header"
 import styles from "./psychedelic.module.scss"
 
@@ -66,23 +69,7 @@ const Psychedelic: FC = () => (
         <Breathe smaller />
       </Section>
 
-      <Section>
-        <h2>Peer Support Resources</h2>
-        <RowLink
-          label="Fireside Project's Calling Line"
-          href="tel:+16234737433"
-          icon={IoCallOutline}
-        />
-        <RowLink
-          label="Fireside Project's Texting Line"
-          href="sms:+16234737433"
-          icon={IoChatbubblesOutline}
-        />
-        <RowLink
-          label="TripSit's Internet Chat"
-          href="https://chat.tripsit.me"
-        />
-      </Section>
+      <PeerSupportResourcesSection />
 
       <Link href="/">
         <a>

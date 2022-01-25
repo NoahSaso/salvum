@@ -16,6 +16,10 @@
   background-color: $hover;
   border-radius: 0.3rem;
 
+  &.transparent {
+    background-color: transparent;
+  }
+
   * {
     line-height: 1.5rem;
     margin: 0;
@@ -61,7 +65,41 @@
   }
 
   margin-bottom: 0.2rem;
-  &:last-child {
+  &:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+.signs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 9rem;
+    margin: 0.6rem 0;
+
+    .signIconWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 80px;
+      height: 80px;
+      border-radius: 40px;
+      margin-bottom: 0.6rem;
+      background-color: $active;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 }

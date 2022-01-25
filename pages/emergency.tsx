@@ -17,10 +17,10 @@ const pages = [
   //   title: "Opioid\nOverdose",
   //   href: "/e/opioid",
   // },
-  // {
-  //   title: "Alcohol\nPoisoning",
-  //   href: "/e/alcohol",
-  // },
+  {
+    title: "Alcohol\nPoisoning",
+    href: "/e/alcohol",
+  },
 ]
 
 const EmergencyPage: FC = () => (
