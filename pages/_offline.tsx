@@ -11,7 +11,7 @@ const Offline: FC = () => (
     </Head>
     <div className={styles.container}>
       <h1>
-        Sorry! Offline mode doesn&lsquo;t seem to be working :&#40;
+        Sorry! Offline mode doesn&apos;t seem to be working :&#40;
         <br />
         <br />
         Reload me once you come back online, and offline mode should work again.

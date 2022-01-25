@@ -58,7 +58,7 @@ const About: FC = () => {
           <p>
             This information will always be free. If you would like to help keep
             this website running, feel free to donate using one of the methods
-            below. Please do not feel obligated to do so; I&lsquo;d rather you
+            below. Please do not feel obligated to do so; I&apos;d rather you
             share this with people who could use it than give me anything.
           </p>
         </div>

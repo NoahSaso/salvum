@@ -147,3 +147,7 @@ main {
   background: $hover;
   border-radius: 0.3rem;
 }
+
+[class~="center"] {
+  text-align: center;
+}
