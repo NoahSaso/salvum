@@ -98,9 +98,9 @@ export const RecoveryPositionSection: FC<SectionProps> = (props) => (
   <Section {...props}>
     <h2>Recovery position</h2>
     <p>
-      If you must leave the person alone, even for a minute, or if they are
-      unconscious, place them in the recovery position so they cannot choke on
-      their own vomit.
+      If they are unconscious, or if you must leave them alone (even for a
+      minute), place them in the recovery position so they cannot choke on their
+      own vomit.
     </p>
 
     <Image

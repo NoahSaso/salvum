@@ -37,6 +37,12 @@
     margin-bottom: 0.5rem;
   }
 
+  h3 {
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0.4rem;
+  }
+
   ul {
     margin-bottom: 0.2rem;
 
@@ -46,6 +52,16 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  h3,
+  ul + p,
+  p + ul {
+    margin-top: 1.4rem;
+  }
+
+  [class~="dim"] {
+    color: $tertiary;
   }
 }
 

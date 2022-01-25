@@ -13,10 +13,10 @@ const pages = [
   //   title: "Too Much\nWeed",
   //   href: "/e/weed",
   // },
-  // {
-  //   title: "Opioid\nOverdose",
-  //   href: "/e/opioid",
-  // },
+  {
+    title: "Opioid\nOverdose",
+    href: "/e/opioid",
+  },
   {
     title: "Alcohol\nPoisoning",
     href: "/e/alcohol",

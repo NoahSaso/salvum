@@ -13,7 +13,7 @@ import {
 } from "../../components/emergency"
 import Header from "../../components/header"
 
-const Alcohol: FC = () => (
+const AlcoholPoisoning: FC = () => (
   <>
     <Head>
       <title>Salvum | Alcohol Poisoning</title>
@@ -23,7 +23,7 @@ const Alcohol: FC = () => (
       />
     </Head>
 
-    <Header title="Alcohol" backHref="/emergency" centered />
+    <Header title="Alcohol Poisoning" backHref="/emergency" centered />
 
     <Container>
       <Section transparent>
@@ -63,8 +63,7 @@ const Alcohol: FC = () => (
 
       <Section>
         <p>
-          If you suspect alcohol poisoning, contact emerency medical services or
-          instruct someone else to do so.
+          Contact emergency medical services or instruct someone else to do so.
         </p>
       </Section>
 
@@ -96,4 +95,4 @@ const Alcohol: FC = () => (
   </>
 )
 
-export default Alcohol
+export default AlcoholPoisoning
