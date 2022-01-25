@@ -2,14 +2,13 @@ import Head from "next/head"
 import Link from "next/link"
 import { FC } from "react"
 
-import Breathe from "../../components/breathe"
 import {
+  BreatheSection,
   Container,
   PeerSupportResourcesSection,
   Section,
 } from "../../components/emergency"
 import Header from "../../components/header"
-import styles from "./psychedelic.module.scss"
 
 const Psychedelic: FC = () => (
   <>
@@ -17,7 +16,7 @@ const Psychedelic: FC = () => (
       <title>Salvum | Psychedelic</title>
       <meta
         name="description"
-        content="Guide to dealing with a psychedelic emergency."
+        content="Guide to dealing with an uncomfortable psychedelic experience."
       />
     </Head>
 
@@ -64,10 +63,7 @@ const Psychedelic: FC = () => (
         </ul>
       </Section>
 
-      <Section className={styles.breatheSection}>
-        <h2>Breathing exercise</h2>
-        <Breathe smaller />
-      </Section>
+      <BreatheSection />
 
       <PeerSupportResourcesSection />
 

@@ -56,7 +56,8 @@
 
   h3,
   ul + p,
-  p + ul {
+  p + ul,
+  p + p {
     margin-top: 1.4rem;
   }
 
@@ -117,5 +118,11 @@
       font-size: 1rem;
       text-align: center;
     }
+  }
+}
+
+.breatheSection {
+  & > div {
+    margin-top: 1rem;
   }
 }

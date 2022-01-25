@@ -9,10 +9,10 @@ const pages = [
     title: "Psychedelic",
     href: "/e/psychedelic",
   },
-  // {
-  //   title: "Too Much\nWeed",
-  //   href: "/e/weed",
-  // },
+  {
+    title: "Too Much\nWeed",
+    href: "/e/weed",
+  },
   {
     title: "Opioid\nOverdose",
     href: "/e/opioid",

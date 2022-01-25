@@ -5,6 +5,7 @@ import { IconType } from "react-icons"
 import { IoOpenOutline } from "react-icons/io5"
 import { IoCallOutline, IoChatbubblesOutline } from "react-icons/io5"
 
+import Breathe from "./breathe"
 import styles from "./emergency.module.scss"
 
 interface Props {
@@ -37,7 +38,7 @@ interface RowLinkProps {
   label: string
   href: string
   icon?: IconType
-  marginTop?: number
+  marginTop?: number | string
 }
 export const RowLink: FC<RowLinkProps> = ({ label, href, icon, marginTop }) => {
   const Icon = icon ?? IoOpenOutline
@@ -126,7 +127,14 @@ export const RecoveryPositionSection: FC<SectionProps> = (props) => (
     <RowLink
       label="Photograph by Rama, Wikimedia Commons, Cc-by-sa-2.0-fr"
       href="https://commons.wikimedia.org/wiki/File:Recovery_position.svg"
-      marginTop={16}
+      marginTop="1rem"
     />
+  </Section>
+)
+
+export const BreatheSection: FC<SectionProps> = (props) => (
+  <Section className={styles.breatheSection} {...props}>
+    <h2>Breathing exercise</h2>
+    <Breathe smaller />
   </Section>
 )
