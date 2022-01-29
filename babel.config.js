@@ -1,4 +1,4 @@
 module.exports = {
-  "presets": ["next/babel"],
-  "plugins": ["@emotion"],
+  presets: ["next/babel"],
+  plugins: ["@emotion"],
 }
