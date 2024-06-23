@@ -29,9 +29,7 @@ const pwaConfig = {
 }
 
 /** @type {import('next-plausible').NextPlausibleProxyOptions} */
-const plausibleProxyOptions = {
-  customDomain: "https://plausible.noahsaso.com",
-}
+const plausibleProxyOptions = {}
 
 module.exports = withPWA(pwaConfig)(
   withPlausibleProxy(plausibleProxyOptions)(nextConfig),
