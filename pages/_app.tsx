@@ -7,7 +7,12 @@ import Layout from "../components/layout"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <PlausibleProvider domain="salvum.love" trackOutboundLinks taggedEvents>
+    <PlausibleProvider
+      domain="salvum.love"
+      customDomain="https://ear.noahsaso.com"
+      trackOutboundLinks
+      taggedEvents
+    >
       <Layout>
         <Component {...pageProps} />
       </Layout>
