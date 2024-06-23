@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import fuzzysort from "fuzzysort"
 import Head from "next/head"
 import Link from "next/link"
@@ -29,7 +29,7 @@ const getROA = (substance: Substance | null, roaIndex: number) =>
 
 const getInteraction = (
   substance: Substance | null,
-  interactionIndex: number
+  interactionIndex: number,
 ) =>
   interactionIndex > -1 &&
   !!substance?.interactions?.length &&
@@ -43,7 +43,7 @@ const getUrlForSubstance = (substance: Substance) =>
 const Substances: FC = () => {
   const { query, isReady, push: routerPush } = useRouter()
   const querySubstance = decodeURIComponent(
-    typeof query.substance === "string" ? query.substance : ""
+    typeof query.substance === "string" ? query.substance : "",
   )
   const [loadedQuerySubstance, setLoadedQuerySubstance] = useState("")
 
@@ -58,7 +58,7 @@ const Substances: FC = () => {
   const [substance, setSelectedSubstance] = useState(null as Substance | null)
   const [listShowing, setListShowing] = useState(true)
   const [loadingSubstance, setLoadingSubstance] = useState(
-    null as Substance | null
+    null as Substance | null,
   )
 
   // show first ROA by default
@@ -80,33 +80,38 @@ const Substances: FC = () => {
   // filter data for search
   useEffect(() => {
     let currentSearch = ++currentSubstanceFilter
-    if (!search?.trim()) setFilteredSubstances(substances)
-    else
-      fuzzysort
-        .goAsync(search, substances, {
+    if (!search?.trim()) {
+      setFilteredSubstances(substances)
+    } else {
+      new Promise(() => {
+        const result = fuzzysort.go(search, substances, {
           keys: ["name", "aliasesStr"],
-          allowTypo: true,
         })
-        .then(async (result) => {
-          // if another filter is running, don't update
-          if (currentSearch !== currentSubstanceFilter) return
 
-          // calculate which aliases to display
-          const augmentedResult = result.map(({ obj }) => ({
-            ...obj,
-            aliasesSubtitle: obj.aliases?.length
-              ? fuzzysort
-                  .go(search, obj.aliases, { allowTypo: true })
-                  .map((r) => r.target)
-                  .join(", ")
-              : undefined,
-          }))
+        // if another filter is running, don't update
+        if (currentSearch !== currentSubstanceFilter) {
+          return
+        }
 
-          // check again bc why not
-          if (currentSearch !== currentSubstanceFilter) return
+        // calculate which aliases to display
+        const augmentedResult = result.map(({ obj }) => ({
+          ...obj,
+          aliasesSubtitle: obj.aliases?.length
+            ? fuzzysort
+                .go(search, obj.aliases)
+                .map((r) => r.target)
+                .join(", ")
+            : undefined,
+        }))
 
-          setFilteredSubstances(augmentedResult)
-        })
+        // check again bc why not
+        if (currentSearch !== currentSubstanceFilter) {
+          return
+        }
+
+        setFilteredSubstances(augmentedResult)
+      })
+    }
   }, [search, setFilteredSubstances, substances])
 
   // scroll to top when substance filter is updated
@@ -201,7 +206,7 @@ const Substances: FC = () => {
         setSearch("")
       }
     },
-    [plausible]
+    [plausible],
   )
 
   // Load substance from query if available
@@ -213,7 +218,7 @@ const Substances: FC = () => {
       return
 
     const substanceFromQuery = substances.find(
-      (s) => s.name.toLowerCase() === querySubstance.toLowerCase()
+      (s) => s.name.toLowerCase() === querySubstance.toLowerCase(),
     )
     if (substanceFromQuery) {
       setSubstanceAndQuery(substanceFromQuery, querySubstance)
@@ -244,9 +249,7 @@ const Substances: FC = () => {
       <div className={styles.header}>
         {!listShowing && (
           <Link href="/">
-            <a>
-              <FiChevronLeft size={24} />
-            </a>
+            <FiChevronLeft size={24} />
           </Link>
         )}
 
@@ -266,36 +269,33 @@ const Substances: FC = () => {
       </div>
 
       <div
-        className={cn(styles.list, { hidden: showingSubstance })}
+        className={clsx(styles.list, { hidden: showingSubstance })}
         ref={listRef}
       >
         {filteredSubstances.map((filteredSubstance) => (
           <Link
             key={filteredSubstance.name}
             href={getUrlForSubstance(filteredSubstance)}
+            onClick={() =>
+              filteredSubstance.name.toLowerCase() ===
+              querySubstance.toLowerCase()
+                ? stayOnCurrentSubstance()
+                : setLoadingSubstance(filteredSubstance)
+            }
           >
-            <a
-              onClick={() =>
-                filteredSubstance.name.toLowerCase() ===
-                querySubstance.toLowerCase()
-                  ? stayOnCurrentSubstance()
-                  : setLoadingSubstance(filteredSubstance)
-              }
-            >
-              <div className="horizontal">
-                <div>
-                  <p>{filteredSubstance.name}</p>
-                  {!!filteredSubstance.aliasesSubtitle && (
-                    <p>{filteredSubstance.aliasesSubtitle}</p>
-                  )}
-                </div>
-                {loadingSubstance === filteredSubstance ? (
-                  <PuffLoader color="#ffffff" size={28} />
-                ) : (
-                  <FiChevronRight size={28} />
+            <div className="horizontal">
+              <div>
+                <p>{filteredSubstance.name}</p>
+                {!!filteredSubstance.aliasesSubtitle && (
+                  <p>{filteredSubstance.aliasesSubtitle}</p>
                 )}
               </div>
-            </a>
+              {loadingSubstance === filteredSubstance ? (
+                <PuffLoader color="#ffffff" size={28} />
+              ) : (
+                <FiChevronRight size={28} />
+              )}
+            </div>
           </Link>
         ))}
       </div>
@@ -340,7 +340,7 @@ const Substances: FC = () => {
                   <button
                     key={idx}
                     onClick={() => selectROA(idx)}
-                    className={cn({
+                    className={clsx({
                       [styles.selected]: selectedROA === idx,
                       [styles.only]: substance.roas.length === 1,
                       [styles.small]: substance.roas.length >= 3,

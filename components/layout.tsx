@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 
 import Footer from "./footer"
 import SafeInsetCover from "./safe_inset_cover"
@@ -8,7 +8,7 @@ const TITLE = "Salvum"
 const DESCRIPTION =
   "Salvum consolidates harm reduction resources in one place in an effort to make safety in or around altered states of consciousness as easy as possible."
 
-const Layout: FC = ({ children }) => (
+const Layout = ({ children }: { children: ReactNode }) => (
   <>
     <Head>
       <title>{TITLE}</title>

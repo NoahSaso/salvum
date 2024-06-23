@@ -1,30 +1,38 @@
-/** @type {import('next').NextConfig} */
-
 const { withPlausibleProxy } = require("next-plausible")
 const withPWA = require("next-pwa")
 const path = require("path")
 
-module.exports = withPWA({
-  pwa: {
-    dest: "public",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, "assets")],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/s/:substance",
+        destination: "/",
+      },
+    ]
   },
   images: {
     domains: ["i.creativecommons.org"],
   },
-  ...withPlausibleProxy({
-    customDomain: "https://plausible.noahsaso.com",
-  })({
-    reactStrictMode: true,
-    sassOptions: {
-      includePaths: [path.join(__dirname, "assets")],
-    },
-    async rewrites() {
-      return [
-        {
-          source: "/s/:substance",
-          destination: "/",
-        },
-      ]
-    },
-  }),
-})
+}
+
+/** @type {import('next-pwa').PWAConfig} */
+const pwaConfig = {
+  dest: "public",
+  // Disable PWA in development.
+  disable: process.env.NODE_ENV === "development",
+}
+
+/** @type {import('next-plausible').NextPlausibleProxyOptions} */
+const plausibleProxyOptions = {
+  customDomain: "https://plausible.noahsaso.com",
+}
+
+module.exports = withPWA(pwaConfig)(
+  withPlausibleProxy(plausibleProxyOptions)(nextConfig),
+)

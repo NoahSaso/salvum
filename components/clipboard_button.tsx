@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import { FC, HTMLAttributes, useRef, useState } from "react"
 import { IoCheckmark, IoCopyOutline } from "react-icons/io5"
 
@@ -33,10 +33,10 @@ const ClipboardButton: FC<Props> = ({
   const ActionIcon = copied ? IoCheckmark : IoCopyOutline
 
   return (
-    <div className={cn(styles.container, containerStyle)}>
+    <div className={clsx(styles.container, containerStyle)}>
       {!!title && <p>{title}</p>}
 
-      <div className={cn("clickable", styles.row)} onClick={copy}>
+      <div className={clsx("clickable", styles.row)} onClick={copy}>
         {!!Icon && <div className={styles.iconContainer}>{Icon}</div>}
 
         <div className={styles.actionContainer}>

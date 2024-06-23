@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import { FC } from "react"
 
 import { ROA } from "../types"
@@ -23,7 +23,10 @@ const ROAComponent: FC<Props> = ({
       <>
         <h3>Dosage</h3>
         {dosage.map(({ name: level, value, note }, idx) => (
-          <div key={idx} className={cn("horizontal", "rowGroup", styles.group)}>
+          <div
+            key={idx}
+            className={clsx("horizontal", "rowGroup", styles.group)}
+          >
             <p>{level}</p>
             <div>
               {!!value && <p>{value}</p>}
@@ -38,7 +41,10 @@ const ROAComponent: FC<Props> = ({
       <>
         <h3>Duration</h3>
         {duration.map(({ name: level, value, note }, idx) => (
-          <div key={idx} className={cn("horizontal", "rowGroup", styles.group)}>
+          <div
+            key={idx}
+            className={clsx("horizontal", "rowGroup", styles.group)}
+          >
             <p>{level}</p>
             <div>
               {!!value && <p>{value}</p>}

@@ -68,17 +68,15 @@ const Psychedelic: FC = () => (
       <PeerSupportResourcesSection />
 
       <Link href="/">
-        <a>
-          <Section>
-            <h2>Toxicity</h2>
-            <p>
-              Classical psychedelics—such as LSD, psilocybin mushrooms,
-              mescaline-containing cacti, and DMT—are safe. If you are unsure
-              about the toxicity of your substance, click here to search for it
-              and then scroll down to find toxicity.
-            </p>
-          </Section>
-        </a>
+        <Section>
+          <h2>Toxicity</h2>
+          <p>
+            Classical psychedelics—such as LSD, psilocybin mushrooms,
+            mescaline-containing cacti, and DMT—are safe. If you are unsure
+            about the toxicity of your substance, click here to search for it
+            and then scroll down to find toxicity.
+          </p>
+        </Section>
       </Link>
 
       <Section>

@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import Head from "next/head"
 import { usePlausible } from "next-plausible"
 import { FC, useEffect, useMemo, useRef, useState } from "react"
@@ -19,10 +19,10 @@ const Interactions: FC = () => {
   const plausible = usePlausible<PlausibleEvents>()
 
   const [substance1, setSubstance1] = useState(
-    null as InteractionSubstance | null
+    null as InteractionSubstance | null,
   )
   const [substance2, setSubstance2] = useState(
-    null as InteractionSubstance | null
+    null as InteractionSubstance | null,
   )
 
   // scroll to top of interaction if selected
@@ -73,11 +73,11 @@ const Interactions: FC = () => {
 
   const substanceLabels = useMemo(
     () => Object.keys(interactions).sort() as unknown as InteractionSubstance[],
-    [interactions]
+    [interactions],
   )
   const interaction = useMemo(
     () => substance1 && substance2 && interactions[substance1][substance2],
-    [substance1, substance2, interactions]
+    [substance1, substance2, interactions],
   )
 
   return (
@@ -87,7 +87,7 @@ const Interactions: FC = () => {
           <button
             key={substance}
             onClick={() => tappedSubstance(substance)}
-            className={cn({
+            className={clsx({
               [styles.selected]:
                 substance === substance1 || substance === substance2,
             })}

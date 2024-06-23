@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import Image from "next/image"
 import { ComponentType, FC, ReactNode, ReactNodeArray } from "react"
 import { IconType } from "react-icons"
@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const Container: FC<Props> = ({ children, className }) => (
-  <div className={cn(styles.container, className)}>{children}</div>
+  <div className={clsx(styles.container, className)}>{children}</div>
 )
 
 interface SectionProps extends Props {
@@ -26,7 +26,7 @@ export const Section: FC<SectionProps> = ({
   transparent,
 }) => (
   <div
-    className={cn("card", styles.section, className, {
+    className={clsx("card", styles.section, className, {
       [styles.transparent]: transparent,
     })}
   >

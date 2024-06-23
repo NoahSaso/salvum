@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import { ComponentType, FC, HTMLAttributes } from "react"
 import { IoOpenOutline } from "react-icons/io5"
 
@@ -25,12 +25,12 @@ const ExternalLinkButton: FC<Props> = ({
     style={containerStyle}
   >
     {!!LeftIconComponent && (
-      <div className={cn(styles.card, styles.iconContainer)}>
+      <div className={clsx(styles.card, styles.iconContainer)}>
         <LeftIconComponent size={24} />
       </div>
     )}
 
-    <div className={cn("horizontal", styles.card)}>
+    <div className={clsx("horizontal", styles.card)}>
       <p>{title}</p>
       <IoOpenOutline size={20} />
     </div>

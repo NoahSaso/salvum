@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import Head from "next/head"
 import Link from "next/link"
 import { FC } from "react"
@@ -21,21 +21,31 @@ const App: FC<AppProps> = ({ title, subtitle, url }) => {
   ) : (
     <FiChevronRight size={32} />
   )
-  const aProps = isExternal
-    ? { href: url, target: "_blank", rel: "noopener noreferrer" }
-    : {}
+
+  const aProps = {
+    href: url,
+    className: clsx("card", styles.appCard),
+    ...(isExternal && {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    }),
+  }
 
   const content = (
-    <a className={cn("card", styles.appCard)} {...aProps}>
+    <>
       <div>
         <h2>{title}</h2>
         {!!subtitle && <p>{subtitle}</p>}
       </div>
       {Icon}
-    </a>
+    </>
   )
 
-  return isExternal ? content : <Link href={url}>{content}</Link>
+  return isExternal ? (
+    <a {...aProps}>{content}</a>
+  ) : (
+    <Link {...aProps}>{content}</Link>
+  )
 }
 
 const Apps: FC = () => {
@@ -71,15 +81,9 @@ const Apps: FC = () => {
         />
 
         <App
-          title="Colorful Particle Simulator 1"
+          title="Colorful Particle Simulator"
           subtitle="interactive only on computer"
           url="http://www.iamnop.com/particles"
-        />
-
-        <App
-          title="Colorful Particle Simulator 2"
-          subtitle="interactive only on computer"
-          url="https://testdrive-archive.azurewebsites.net/Graphics/TouchEffects/Default.html"
         />
 
         <App

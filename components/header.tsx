@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import Link from "next/link"
 import { FC } from "react"
 import { FiChevronLeft } from "react-icons/fi"
@@ -14,7 +14,7 @@ interface Props {
 const Header: FC<Props> = ({ title, backHref, centered }) => {
   const content = (
     <h1
-      className={cn({
+      className={clsx({
         [styles.centered]: centered,
         [styles.hasBack]: !!backHref,
       })}
@@ -24,11 +24,9 @@ const Header: FC<Props> = ({ title, backHref, centered }) => {
   )
 
   return backHref ? (
-    <Link href={backHref}>
-      <a className={styles.container}>
-        <FiChevronLeft size={30} />
-        {content}
-      </a>
+    <Link href={backHref} className={styles.container}>
+      <FiChevronLeft size={30} />
+      {content}
     </Link>
   ) : (
     <div className={styles.container}>{content}</div>

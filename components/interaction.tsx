@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import { FC } from "react"
 
 import { INTERACTION_CATEGORIES } from "../data/interactions"

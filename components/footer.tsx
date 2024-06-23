@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { FC } from "react"
@@ -61,17 +61,15 @@ const Footer: FC = () => {
   const rootPath = "/" + pathname.split("/")[1]
 
   return (
-    <div className={cn("centered", styles.container)}>
+    <div className={clsx("centered", styles.container)}>
       {tabs.map(({ label, icon: { inactive, active }, href }) => {
         const isActive = rootPath === href
         const Icon = isActive ? active : inactive
         return (
           <div key={href}>
-            <Link href={href}>
-              <a className={cn({ [styles.active]: isActive })}>
-                <Icon size={24} />
-                <p>{label}</p>
-              </a>
+            <Link href={href} className={clsx({ [styles.active]: isActive })}>
+              <Icon size={24} />
+              <p>{label}</p>
             </Link>
           </div>
         )

@@ -1,4 +1,4 @@
-import cn from "classnames"
+import clsx from "clsx"
 import { FC, useEffect, useState } from "react"
 
 import styles from "./breathe.module.scss"
@@ -41,7 +41,7 @@ const Breathe: FC<BreatheProps> = ({ smaller }) => {
   const [breathingOut, setBreathingOut] = useState(false)
   const [count, setCount] = useState(breatheCountMap[BreatheState.NotStarted])
   const [instructions, setInstructions] = useState(
-    breatheTextMap[BreatheState.NotStarted]
+    breatheTextMap[BreatheState.NotStarted],
   )
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const Breathe: FC<BreatheProps> = ({ smaller }) => {
   return (
     <div className={styles.breatheContainer}>
       <div
-        className={cn(styles.outer, {
+        className={clsx(styles.outer, {
           [styles.breatheIn]: breathingIn,
           [styles.breatheOut]: breathingOut,
         })}
@@ -91,7 +91,7 @@ const Breathe: FC<BreatheProps> = ({ smaller }) => {
         </div>
       </div>
 
-      <p className={cn(styles.instructions, { [styles.smaller]: smaller })}>
+      <p className={clsx(styles.instructions, { [styles.smaller]: smaller })}>
         {instructions}
       </p>
     </div>

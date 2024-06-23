@@ -42,14 +42,12 @@ const EmergencyPage: FC = () => {
 
         <div className={styles.pages}>
           {pages.map(({ title, href }) => (
-            <Link key={title} href={href}>
-              <a onClick={() => setLoadingHref(href)}>
-                {loadingHref === href ? (
-                  <PuffLoader size={60} color="#ffffff" />
-                ) : (
-                  title
-                )}
-              </a>
+            <Link key={title} href={href} onClick={() => setLoadingHref(href)}>
+              {loadingHref === href ? (
+                <PuffLoader size={60} color="#ffffff" />
+              ) : (
+                title
+              )}
             </Link>
           ))}
         </div>
